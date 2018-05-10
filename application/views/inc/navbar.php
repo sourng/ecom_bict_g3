@@ -16,7 +16,7 @@
                         <i class="fa fa-search"></i>
                     </button>
                     <a class="btn btn-default navbar-toggle" href="basket.html">
-                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
+                        <i class="fa fa-shopping-cart"></i><span class="hidden-xs">3 items in cart</span>
                     </a>
                 </div>
             </div>
@@ -126,15 +126,15 @@
                                             <ul>
                                                 <li><a href="<?php echo site_url(); ?>">Homepage</a></li>
                                                 <li><a href="<?php echo site_url(); ?>home/category">Category - sidebar left</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/category_right">Category - sidebar right</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/category_full">Category - full width</a></li>
+                                              <!--   <li><a href="<?php echo site_url(); ?>home/category_right">Category - sidebar right</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category_full">Category - full width</a></li> -->
                                                 <li><a href="<?php echo site_url(); ?>home/detail">Product detail</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>User</h5>
                                             <ul>
-                                                <li><a href="register.html">Register / login</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/register">Register / login</a></li>
                                                 <li><a href="customer-orders.html">Orders history</a></li>
                                                 <li><a href="customer-order.html">Order history detail</a></li>
                                                 <li><a href="customer-wishlist.html">Wishlist</a></li>
