@@ -23,6 +23,14 @@ class Home extends CI_Controller {
 		$this->load->view('text');
 		
 	}
+		public function category_full
+		{
+			$this->load->view('category-full');
+		}
+		public function category_right
+		{
+			$this->load->view('category-right');
+		}
 
 
 }

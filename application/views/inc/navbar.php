@@ -2,7 +2,7 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="index.php" data-animate-hover="bounce">
+                <a class="navbar-brand home" href="<?php echo site_url(); ?>" data-animate-hover="bounce">
                     <img src="<?php echo base_url(); ?>public/img/logo.png" alt="Obaju logo" class="hidden-xs">
                     <img src="<?php echo base_url(); ?>public/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
@@ -25,7 +25,7 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="active"><a href="index.php">Home</a>
+                    <li class="active"><a href="<?php echo site_url(); ?>">Home</a>
                     </li>
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
@@ -36,29 +36,29 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-    											 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
+                                                 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Shoes</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Accessories</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a> </li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a> </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Featured</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                             <h5>Looks and trends</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -77,23 +77,23 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Shoes</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Accessories</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                             <h5>Looks and trends</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -124,11 +124,11 @@
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
                                             <ul>
-                                                <li><a href="index.html">Homepage</a></li>
-                                                <li><a href="category.html">Category - sidebar left</a></li>
-                                                <li><a href="category-right.html">Category - sidebar right</a></li>
-                                                <li><a href="category-full.html">Category - full width</a></li>
-                                                <li><a href="detail.html">Product detail</a></li>
+                                                <li><a href="<?php echo site_url(); ?>">Homepage</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Category - sidebar left</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category_right">Category - sidebar right</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category_full">Category - full width</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/detail">Product detail</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -192,9 +192,9 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search">
                         <span class="input-group-btn">
-			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
 
-		    </span>
+            </span>
                     </div>
                 </form>
 
