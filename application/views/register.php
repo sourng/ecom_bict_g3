@@ -44,7 +44,7 @@
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form action="<?php echo site_url(); ?>home/customer_orders" method="post">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name">
@@ -74,7 +74,7 @@
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form action="<?php echo site_url(); ?>home/customer_orders" method="post">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="text" class="form-control" id="email">

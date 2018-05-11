@@ -105,65 +105,24 @@
                 </div>
 
                 <div class="container">
-                    <div class="product-slider">
-
-                                         
-                     
-
-                     
-                        <!-- /.col-md-4 -->
-
-                        <div class="item">
-                            <div class="product">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="detail.html">
-                                                <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="detail.html">
-                                                <img src="<?php echo base_url(); ?>public/img/product2_2.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="detail.html" class="invisible">
-                                    <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3><a href="<?php echo site_url(); ?>home/detail ">White Blouse Armani</a></h3>
-                                    <p class="price"><del>$280</del> $143.00</p>
-                                </div>
-                                <!-- /.text -->
-
-                                <div class="ribbon sale">
-                                    <div class="theribbon">SALE</div>
-                                    <div class="ribbon-background"></div>
-                                </div>
-                                <!-- /.ribbon -->
-
-                                <div class="ribbon new">
-                                    <div class="theribbon">NEW</div>
-                                    <div class="ribbon-background"></div>
-                                </div>
-                                <!-- /.ribbon -->
-
-                                <div class="ribbon gift">
-                                    <div class="theribbon">GIFT</div>
-                                    <div class="ribbon-background"></div>
-                                </div>
-                                <!-- /.ribbon -->
-                            </div>
-                            <!-- /.product -->
-                        </div>
-
-                       
+                     <div class="product-slider">     
+                   
+                   <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
+                    <?php $this->load->view('inc/products_index.php') ?>
 
                     </div>
                     <!-- /.product-slider -->
+
                 </div>
+
 
 
                 <!-- /.container -->
@@ -183,17 +142,17 @@
                         <div id="get-inspired" class="owl-carousel owl-theme">
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired1.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>public/img/getinspired1.jpg" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired2.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>public/img/getinspired2.jpg" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired3.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>public/img/getinspired3.jpg" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -223,26 +182,26 @@
                     <div id="blog-homepage" class="row">
                         <div class="col-sm-6">
                             <div class="post">
-                                <h4><a href="post.html">Fashion now</a></h4>
+                                <h4><a href="<?php echo site_url(); ?>home/post">Fashion now</a></h4>
                                 <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a>
                                 </p>
                                 <hr>
                                 <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
                                     ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                <p class="read-more"><a href="post.html" class="btn btn-primary">Continue reading</a>
+                                <p class="read-more"><a href="<?php echo site_url(); ?>home/post" class="btn btn-primary">Continue reading</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="post">
-                                <h4><a href="post.html">Who is who - example blog post</a></h4>
+                                <h4><a href="<?php echo site_url(); ?>home/post">Who is who - example blog post</a></h4>
                                 <p class="author-category">By <a href="#">John Slim</a> in <a href="">About Minimal</a>
                                 </p>
                                 <hr>
                                 <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
                                     ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                <p class="read-more"><a href="post.html" class="btn btn-primary">Continue reading</a>
+                                <p class="read-more"><a href="<?php echo site_url(); ?>home/post" class="btn btn-primary">Continue reading</a>
                                 </p>
                             </div>
 

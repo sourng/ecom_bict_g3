@@ -43,6 +43,27 @@ class Home extends CI_Controller {
 		{
 			$this->load->view('customer_orders');
 		}
+			public function customer_wishlist()
+		{
+			$this->load->view('customer_wishlist'); 
+		}
+			public function customer_account()
+		{
+			$this->load->view('customer_account');
+		}
+			public function basket()
+		{
+			$this->load->view('basket');
+		}
+			public function faq()
+		{
+			$this->load->view('faq');
+		}
+			public function post()
+		{
+			$this->load->view('post');
+		}
+
 
 
 

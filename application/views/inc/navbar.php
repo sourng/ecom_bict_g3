@@ -36,7 +36,7 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-                                                 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
+    											 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -135,10 +135,10 @@
                                             <h5>User</h5>
                                             <ul>
                                                 <li><a href="<?php echo site_url(); ?>home/register">Register / login</a></li>
-                                                <li><a href="customer-orders.html">Orders history</a></li>
-                                                <li><a href="customer-order.html">Order history detail</a></li>
-                                                <li><a href="customer-wishlist.html">Wishlist</a></li>
-                                                <li><a href="customer-account.html">Customer account / change password</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/customer_orders">Orders history</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/customer_orders">Order history detail</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/customer_wishlist">Wishlist</a></li>
+                                                <li><a href="<?php site_url(); ?>home/customer_account">Customer account / change password</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -157,7 +157,7 @@
                                                 <li><a href="blog.html">Blog listing</a></li>
                                                 <li><a href="post.html">Blog Post</a></li>
                                                 <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="text.html">Text page</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/text">Text page</a></li>
                                                 <li><a href="text-right.html">Text page - right sidebar</a></li>
                                                 <li><a href="404.html">404 page</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
@@ -176,7 +176,7 @@
 
             <div class="navbar-buttons">
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                    <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
                 </div>
                 <!--/.nav-collapse -->
 
@@ -192,9 +192,9 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search">
                         <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
 
-            </span>
+		    </span>
                     </div>
                 </form>
 

@@ -5,19 +5,16 @@
                         <h4>Pages</h4>
 
                         <ul>
-                            <li><a href="<?php echo site_url(); ?>text">About us</a></li>
-                            <li><a href="<?php echo site_url(); ?>text">Terms and conditions</a></li>
-                           <!--  <li><a href="<?php echo site_url(); ?>faq.html">FAQ</a>
-                            </li>
-                            <li><a href="<?php echo site_url(); ?>contact.html">Contact us</a>
-                            </li> -->
+                            <li><a href="<?php echo site_url(); ?>home/text">About us</a></li>
+                            <li><a href="<?php echo site_url(); ?>home/text">Terms and conditions</a></li>
+                          
                         </ul>
                         <hr>
                         <h4>User section</h4>
                         <ul>
                             <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                             </li>
-                            <li><a href="register.html">Regiter</a>
+                            <li><a href="<?php echo site_url(); ?>home/register">Regiter</a>
                             </li>
                         </ul>
                         <hr class="hidden-md hidden-lg hidden-sm">
@@ -31,23 +28,23 @@
                         <h5>Men</h5>
 
                         <ul>
-                            <li><a href="category.html">T-shirts</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a>
                             </li>
-                            <li><a href="category.html">Shirts</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">Shirts</a>
                             </li>
-                            <li><a href="category.html">Accessories</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">Accessories</a>
                             </li>
                         </ul>
 
                         <h5>Ladies</h5>
                         <ul>
-                            <li><a href="category.html">T-shirts</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a>
                             </li>
-                            <li><a href="category.html">Skirts</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">Skirts</a>
                             </li>
-                            <li><a href="category.html">Pants</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">Pants</a>
                             </li>
-                            <li><a href="category.html">Accessories</a>
+                            <li><a href="<?php echo site_url(); ?>home/category">Accessories</a>
                             </li>
                         </ul>
 
@@ -69,7 +66,7 @@
                             <strong>Great Britain</strong>
                         </p>
 
-                        <a href="contact.html">Go to contact page</a>
+                        <a href="<?php echo site_url(); ?>home/contact">Go to contact page</a>
 
                         <hr class="hidden-md hidden-lg">
 
