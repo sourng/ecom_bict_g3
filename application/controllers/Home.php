@@ -39,6 +39,7 @@ class Home extends CI_Controller {
 		{
 			$this->load->view('contact');
 		}
+		
 			public function customer_orders()
 		{
 			$this->load->view('customer_orders');
@@ -63,6 +64,27 @@ class Home extends CI_Controller {
 		{
 			$this->load->view('post');
 		}
+			public function blog()
+		{
+			$this->load->view('blog');
+		}
+			public function checkout1()
+		{
+			$this->load->view('checkout1');
+		}
+			public function checkout2()
+		{
+			$this->load->view('checkout2');
+		}
+			public function checkout3()
+		{
+			$this->load->view('checkout3');
+		}
+			public function checkout4()
+		{
+			$this->load->view('checkout4');
+		}
+
 
 
 

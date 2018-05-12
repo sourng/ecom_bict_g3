@@ -144,23 +144,22 @@
                                         <div class="col-sm-3">
                                             <h5>Order process</h5>
                                             <ul>
-                                                <li><a href="basket.html">Shopping cart</a></li>
-                                                <li><a href="checkout1.html">Checkout - step 1</a></li>
-                                                <li><a href="checkout2.html">Checkout - step 2</a></li>
-                                                <li><a href="checkout3.html">Checkout - step 3</a></li>
-                                                <li><a href="checkout4.html">Checkout - step 4</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/basket">Shopping cart</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/checkout1">Checkout - step 1</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/checkout2">Checkout - step 2</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/checkout3">Checkout - step 3</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/checkout4">Checkout - step 4</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Pages and blog</h5>
                                             <ul>
-                                                <li><a href="blog.html">Blog listing</a></li>
-                                                <li><a href="post.html">Blog Post</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/blog">Blog listing</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/post">Blog Post</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/faq">FAQ</a></li>
                                                 <li><a href="<?php echo site_url(); ?>home/text">Text page</a></li>
-                                                <li><a href="text-right.html">Text page - right sidebar</a></li>
-                                                <li><a href="404.html">404 page</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <!-- <li><a href="404.html">404 page</a></li> -->
+                                                <li><a href="<?php echo site_url(); ?>home/contact">Contact</a></li>
                                             </ul>
                                         </div>
                                     </div>
