@@ -16,6 +16,9 @@
                 </ul>
             </div>
         </div>
+
+
+
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
             <div class="modal-dialog modal-sm">
 
@@ -25,12 +28,12 @@
                         <h4 class="modal-title" id="Login">Customer login</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="<?php echo site_url(); ?>home/customer_orders" method="post">
+                        <form action="<?php echo site_url(); ?>login/sigin" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email-modal" placeholder="email">
+                                <input type="text" class="form-control" id="email-modal" placeholder="email" name="user_name">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password-modal" placeholder="password">
+                                <input type="password" class="form-control" id="password-modal" placeholder="password" name="password">
                             </div>
 
                             <p class="text-center">
