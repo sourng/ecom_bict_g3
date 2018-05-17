@@ -44,13 +44,13 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
-                                    <a href="text.html">Text page</a>
+                                    <a href="<?php echo base_url();?>home/text">Text page</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact page</a>
+                                    <a href="<?php echo base_url();?>home/contact">Contact page</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">FAQ</a>
+                                    <a href="<?php echo base_url();?>home/faq">FAQ</a>
                                 </li>
 
                             </ul>
