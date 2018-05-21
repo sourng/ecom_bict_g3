@@ -34,14 +34,14 @@
                 <div class="col-md-9" id="checkout">
 
                     <div class="box">
-                        <form method="post" action="checkout4.html">
+                        <form method="post" action="<?php echo site_url(); ?>home/checkout4">
                             <h1>Checkout - Order review</h1>
                             <ul class="nav nav-pills nav-justified">
-                                <li><a href="checkout1.html"><i class="fa fa-map-marker"></i><br>Address</a>
+                                <li><a href="<?php echo site_url(); ?>home/checkout1"><i class="fa fa-map-marker"></i><br>Address</a>
                                 </li>
-                                <li><a href="checkout2.html"><i class="fa fa-truck"></i><br>Delivery Method</a>
+                                <li><a href="<?php echo site_url(); ?>home/checkout2"><i class="fa fa-truck"></i><br>Delivery Method</a>
                                 </li>
-                                <li><a href="checkout3.html"><i class="fa fa-money"></i><br>Payment Method</a>
+                                <li><a href="<?php echo site_url(); ?>home/checkout3"><i class="fa fa-money"></i><br>Payment Method</a>
                                 </li>
                                 <li class="active"><a href="#"><i class="fa fa-eye"></i><br>Order Review</a>
                                 </li>
@@ -63,7 +63,7 @@
                                             <tr>
                                                 <td>
                                                     <a href="#">
-                                                        <img src="img/detailsquare.jpg" alt="White Blouse Armani">
+                                                        <img src="<?php echo base_url(); ?>public/img/detailsquare.jpg" alt="White Blouse Armani">
                                                     </a>
                                                 </td>
                                                 <td><a href="#">White Blouse Armani</a>
@@ -76,7 +76,7 @@
                                             <tr>
                                                 <td>
                                                     <a href="#">
-                                                        <img src="img/basketsquare.jpg" alt="Black Blouse Armani">
+                                                        <img src="<?php echo base_url(); ?>public/img/basketsquare.jpg" alt="Black Blouse Armani">
                                                     </a>
                                                 </td>
                                                 <td><a href="#">Black Blouse Armani</a>
@@ -102,7 +102,7 @@
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="checkout3.html" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Payment method</a>
+                                    <a href="<?php echo site_url(); ?>home/checkout3" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Payment method</a>
                                 </div>
                                 <div class="pull-right">
                                     <button type="submit" class="btn btn-primary">Place an order<i class="fa fa-chevron-right"></i>
