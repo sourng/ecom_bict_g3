@@ -35,7 +35,7 @@
                 <div class="col-md-9" id="checkout">
 
                     <div class="box">
-                        <form method="post" action="checkout3.html">
+                        <form method="post" action="<?php echo base_url();?>home/checkout3">
                             <h1>Checkout - Delivery method</h1>
                             <ul class="nav nav-pills nav-justified">
                                 <li><a href="checkout1.html"><i class="fa fa-map-marker"></i><br>Address</a>
@@ -98,7 +98,7 @@
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="basket.html" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Addresses</a>
+                                    <a href="<?php echo base_url();?>home/basket" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Addresses</a>
                                 </div>
                                 <div class="pull-right">
                                     <button type="submit" class="btn btn-primary">Continue to Payment Method<i class="fa fa-chevron-right"></i>

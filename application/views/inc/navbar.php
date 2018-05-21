@@ -115,59 +115,7 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Shop</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>">Homepage</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Category - sidebar left</a></li>
-                                              <!--   <li><a href="<?php echo site_url(); ?>home/category_right">Category - sidebar right</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/category_full">Category - full width</a></li> -->
-                                                <li><a href="<?php echo site_url(); ?>home/detail">Product detail</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>User</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/register">Register / login</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/customer_orders">Orders history</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/customer_orders">Order history detail</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/customer_wishlist">Wishlist</a></li>
-                                                <li><a href="<?php site_url(); ?>home/customer_account">Customer account / change password</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Order process</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/basket">Shopping cart</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/checkout1">Checkout - step 1</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/checkout2">Checkout - step 2</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/checkout3">Checkout - step 3</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/checkout4">Checkout - step 4</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Pages and blog</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/blog">Blog listing</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/post">Blog Post</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/faq">FAQ</a></li>
-                                                <li><a href="<?php echo site_url(); ?>home/text">Text page</a></li>
-                                                <!-- <li><a href="404.html">404 page</a></li> -->
-                                                <li><a href="<?php echo site_url(); ?>home/contact">Contact</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
-                    </li>
+                    
                 </ul>
 
             </div>

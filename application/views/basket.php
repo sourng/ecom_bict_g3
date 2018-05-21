@@ -35,7 +35,7 @@
 
                     <div class="box">
 
-                        <form method="post" action="checkout1.html">
+                        <form method="post" action="<?php echo base_url();?>home/checkout1">
 
                             <h1>Shopping cart</h1>
                             <p class="text-muted">You currently have 3 item(s) in your cart.</p>
