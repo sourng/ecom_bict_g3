@@ -38,7 +38,7 @@
                         <form method="post" action="<?php echo base_url();?>home/checkout3">
                             <h1>Checkout - Delivery method</h1>
                             <ul class="nav nav-pills nav-justified">
-                                <li><a href="checkout1.html"><i class="fa fa-map-marker"></i><br>Address</a>
+                                <li><a href="<?php echo site_url(); ?>home/checkout1"><i class="fa fa-map-marker"></i><br>Address</a>
                                 </li>
                                 <li class="active"><a href="#"><i class="fa fa-truck"></i><br>Delivery Method</a>
                                 </li>
