@@ -1,22 +1,12 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.5.32 - MySQL Community Server (GPL)
--- Server OS:                    Win32
--- HeidiSQL Version:             9.5.0.5196
--- --------------------------------------------------------
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Dumping database structure for ci_ecommerce
 CREATE DATABASE IF NOT EXISTS `ci_ecommerce` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ci_ecommerce`;
 
--- Dumping structure for table ci_ecommerce.brands
 CREATE TABLE IF NOT EXISTS `brands` (
   `id` int(11) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -25,11 +15,9 @@ CREATE TABLE IF NOT EXISTS `brands` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.brands: ~0 rows (approximately)
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.category
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -38,11 +26,9 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.category: ~0 rows (approximately)
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.company
 CREATE TABLE IF NOT EXISTS `company` (
   `id` int(11) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -56,11 +42,24 @@ CREATE TABLE IF NOT EXISTS `company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.company: ~0 rows (approximately)
 /*!40000 ALTER TABLE `company` DISABLE KEYS */;
 /*!40000 ALTER TABLE `company` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.order
+CREATE TABLE IF NOT EXISTS `customer` (
+  `cus-id` int(11) NOT NULL,
+  `cus-name` varchar(250) NOT NULL,
+  `cus-email` varchar(250) NOT NULL,
+  `cus-pass` varchar(250) NOT NULL,
+  `cus-phone` varchar(250) NOT NULL,
+  `cus-address` varchar(250) NOT NULL,
+  `img-profile` varchar(250) NOT NULL,
+  `status` varchar(250) NOT NULL,
+  PRIMARY KEY (`cus-id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+
 CREATE TABLE IF NOT EXISTS `order` (
   `id` int(11) NOT NULL,
   `pro_id` int(11) DEFAULT NULL,
@@ -74,18 +73,39 @@ CREATE TABLE IF NOT EXISTS `order` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.order: ~0 rows (approximately)
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.products
+CREATE TABLE IF NOT EXISTS `order-detail` (
+  `order-detail-id` int(11) NOT NULL,
+  `order-id` int(11) NOT NULL,
+  `price` varchar(250) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  PRIMARY KEY (`order-detail-id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*!40000 ALTER TABLE `order-detail` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order-detail` ENABLE KEYS */;
+
+CREATE TABLE IF NOT EXISTS `pro-category` (
+  `pro-cat-id` int(11) NOT NULL,
+  `pro-cat-name` varchar(250) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  PRIMARY KEY (`pro-cat-id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*!40000 ALTER TABLE `pro-category` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pro-category` ENABLE KEYS */;
+
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL,
   `brands_id` int(11) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `image` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `image1` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `image2` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image3` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `feature` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `new` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   `price` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -96,11 +116,9 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.products: ~0 rows (approximately)
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.stock_in
 CREATE TABLE IF NOT EXISTS `stock_in` (
   `id` int(11) NOT NULL,
   `pro_id` int(11) DEFAULT NULL,
@@ -113,11 +131,9 @@ CREATE TABLE IF NOT EXISTS `stock_in` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.stock_in: ~0 rows (approximately)
 /*!40000 ALTER TABLE `stock_in` DISABLE KEYS */;
 /*!40000 ALTER TABLE `stock_in` ENABLE KEYS */;
 
--- Dumping structure for table ci_ecommerce.stock_out
 CREATE TABLE IF NOT EXISTS `stock_out` (
   `id` int(11) NOT NULL,
   `pro_id` int(11) DEFAULT NULL,
@@ -129,7 +145,6 @@ CREATE TABLE IF NOT EXISTS `stock_out` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table ci_ecommerce.stock_out: ~0 rows (approximately)
 /*!40000 ALTER TABLE `stock_out` DISABLE KEYS */;
 /*!40000 ALTER TABLE `stock_out` ENABLE KEYS */;
 
