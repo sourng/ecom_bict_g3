@@ -11,34 +11,31 @@
 		<!-- Top Bar -->
 		<?php echo include_once('inc/topbar.php'); ?>
 
-<<<<<<< HEAD
+ 
 		<?php include_once'inc/top_bar.php';?>
-=======
+
 		<!-- End Top Bar -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+ 
 
 		<!-- Header Main -->
 			<?php echo include_once('inc/header_main.php') ?>
 
-<<<<<<< HEAD
+ 
 		<?php include_once'inc/header_main.php';?>
-=======
+
 		<!-- end header_main -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+ 
 		
 		<!-- Main Navigation -->
 			<?php echo include_once('inc/main_navigation.php'); ?>
 
-<<<<<<< HEAD
 		<?php include_once'inc/nav.php';?>
 		
-=======
+
 		<!-- End Main Navigation -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		<!-- Menu -->
 			<?php echo include_once('inc/menu.php') ?>
 
-<<<<<<< HEAD
 		<div class="page_menu">
 			<div class="container">
 				<div class="row">
@@ -122,9 +119,9 @@
 				</div>
 			</div>
 		</div>
-=======
+
 		<!-- end menu -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+ 
 
 	</header>
 	
@@ -372,14 +369,14 @@
 <<<<<<< HEAD
 
 <?php include_once'inc/footer.php';?>
-=======
+
 		<?php echo include_once('inc/footer.php') ?>	
 	<!-- End footer -->
 	<!-- Copyright -->
 		<?php echo include_once('inc/copyright.php') ?>
 	<!--  End Copyright -->
 </div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+ 
 
 
 <script src="js/jquery-3.3.1.min.js"></script>
