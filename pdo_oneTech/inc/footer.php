@@ -71,6 +71,7 @@
 
 			</div>
 		</div>
+<<<<<<< HEAD
 	</footer>
 
 	<!-- Copyright -->
@@ -99,3 +100,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</div>
 </div>
+=======
+	</footer>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178

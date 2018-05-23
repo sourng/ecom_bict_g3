@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Shop</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="OneTech shop project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/shop_responsive.css">
-
-</head>
+<?php echo include_once('inc/header.php') ?>
 
 <body>
 
@@ -26,19 +9,36 @@
 	<header class="header">
 
 		<!-- Top Bar -->
+		<?php echo include_once('inc/topbar.php'); ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/top_bar.php';?>
+=======
+		<!-- End Top Bar -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 		<!-- Header Main -->
+			<?php echo include_once('inc/header_main.php') ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/header_main.php';?>
+=======
+		<!-- end header_main -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		
 		<!-- Main Navigation -->
+			<?php echo include_once('inc/main_navigation.php'); ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/nav.php';?>
 		
+=======
+		<!-- End Main Navigation -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		<!-- Menu -->
+			<?php echo include_once('inc/menu.php') ?>
 
+<<<<<<< HEAD
 		<div class="page_menu">
 			<div class="container">
 				<div class="row">
@@ -122,6 +122,9 @@
 				</div>
 			</div>
 		</div>
+=======
+		<!-- end menu -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 	</header>
 	
@@ -226,7 +229,7 @@
 								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_5.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Philips BT6900A</a></div></div>
+									<div class="product_name"><div><a href="product.php" tabindex="0">Philips BT6900A</a></div></div>
 								</div>
 								<div class="product_fav"><i class="fas fa-heart"></i></div>
 								<ul class="product_marks">
@@ -241,7 +244,7 @@
 								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225<span>$300</span></div>
-									<div class="product_name"><div><a href="#" tabindex="0">Huawei MediaPad...</a></div></div>
+									<div class="product_name"><div><a href="product.php" tabindex="0">Huawei MediaPad...</a></div></div>
 								</div>
 								<div class="product_fav"><i class="fas fa-heart"></i></div>
 								<ul class="product_marks">
@@ -256,7 +259,7 @@
 								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Apple iPod shuffle</a></div></div>
+									<div class="product_name"><div><a href="product.php" tabindex="0">Apple iPod shuffle</a></div></div>
 								</div>
 								<div class="product_fav"><i class="fas fa-heart"></i></div>
 								<ul class="product_marks">
@@ -264,262 +267,6 @@
 									<li class="product_mark product_new">new</li>
 								</ul>
 							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Sony MDRZX310W</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">LUNA Smartphone</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/shop_1.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon IXUS 175...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_5.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379<span>$300</span></div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon STM Kit...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_6.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225<span>$300</span></div>
-									<div class="product_name"><div><a href="#" tabindex="0">Samsung J330F</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_7.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Lenovo IdeaPad</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_8.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Digitus EDNET...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_1.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Astro M2 Black</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_2.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Transcend T.Sonic</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_3.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Xiaomi Band 2...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_4.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Rapoo T8 White</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item discount">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225<span>$300</span></div>
-									<div class="product_name"><div><a href="#" tabindex="0">Huawei MediaPad...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_6.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Nokia 3310 (2017)</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_7.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Rapoo 7100p Gray</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_8.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon EF</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/shop_2.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Gembird SPK-103</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_5.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon STM Kit...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
-
 						</div>
 
 						<!-- Shop Page Navigation -->
@@ -537,11 +284,10 @@
 						</div>
 
 					</div>
-
 				</div>
 			</div>
 		</div>
-	</div>
+	</dsiv>
 
 	<!-- Recently Viewed -->
 
@@ -561,53 +307,7 @@
 						
 						<!-- Recently Viewed Slider -->
 
-						<div class="owl-carousel owl-theme viewed_slider">
-							
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_1.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$225<span>$300</span></div>
-										<div class="viewed_name"><a href="#">Beoplay H7</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_2.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$379</div>
-										<div class="viewed_name"><a href="#">LUNA Smartphone</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_3.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$225</div>
-										<div class="viewed_name"><a href="#">Samsung J730F...</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
-
+						<div class="owl-carousel owl-theme viewed_slider">		
 							<!-- Recently Viewed Item -->
 							<div class="owl-item">
 								<div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
@@ -622,39 +322,10 @@
 									</ul>
 								</div>
 							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_5.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$225<span>$300</span></div>
-										<div class="viewed_name"><a href="#">Sony PS4 Slim</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_6.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$375</div>
-										<div class="viewed_name"><a href="#">Speedlink...</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
 						</div>
-
+						
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -694,33 +365,22 @@
 	</div>
 
 	<!-- Newsletter -->
+		<?php echo include_once('inc/newsletter.php') ?>
 
-	<div class="newsletter">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
-						<div class="newsletter_title_container">
-							<div class="newsletter_icon"><img src="images/send.png" alt=""></div>
-							<div class="newsletter_title">Sign up for Newsletter</div>
-							<div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>
-						</div>
-						<div class="newsletter_content clearfix">
-							<form action="#" class="newsletter_form">
-								<input type="email" class="newsletter_input" required="required" placeholder="Enter your email address">
-								<button class="newsletter_button">Subscribe</button>
-							</form>
-							<div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	<!-- End Newsletter -->
 	<!-- Footer -->
+<<<<<<< HEAD
 
 <?php include_once'inc/footer.php';?>
+=======
+		<?php echo include_once('inc/footer.php') ?>	
+	<!-- End footer -->
+	<!-- Copyright -->
+		<?php echo include_once('inc/copyright.php') ?>
+	<!--  End Copyright -->
+</div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>

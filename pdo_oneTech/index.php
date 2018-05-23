@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>OneTech</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="OneTech shop project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 
-</head>
+<?php
+  include_once 'db/dbconfig.php';
+
+  if(isset($_GET['id']))
+  {
+    $id = $_GET['id'];
+    extract($crud->getID_Detail($id)); 
+  }
+
+?>
+
+<?php echo include_once('inc/head_home.php') ?>
 
 <body>
 
@@ -26,20 +21,37 @@
 	<header class="header">
 
 		<!-- Top Bar -->
+		<?php echo include_once('inc/topbar.php'); ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/top_bar.php';?>
+=======
+		<!-- End Top Bar -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 		<!-- Header Main -->
+			<?php echo include_once('inc/header_main.php') ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/header_main.php';?>
+=======
+		<!-- end header_main -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		
 		<!-- Main Navigation -->
+			<?php echo include_once('inc/main_navigation.php'); ?>
 
+<<<<<<< HEAD
 		<?php include_once'inc/nav.php';?>
 		
 		
+=======
+		<!-- End Main Navigation -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		<!-- Menu -->
+			<?php echo include_once('inc/menu.php') ?>
 
+<<<<<<< HEAD
 		<div class="page_menu">
 			<div class="container">
 				<div class="row">
@@ -123,6 +135,9 @@
 				</div>
 			</div>
 		</div>
+=======
+		<!-- end menu -->
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 	</header>
 	
@@ -282,145 +297,25 @@
 					<!-- Deals -->
 
 					<div class="deals">
-						<div class="deals_title">Deals of the Week</div>
+						<?php
+							      $query = "SELECT * FROM tbl_dow";       
+							      $records_per_page=6;
+							      $newquery = $crud->paging($query,$records_per_page);
+							      $crud->getTitle_of_The_Week($newquery);
+							     ?>
 						<div class="deals_slider_container">
 							
 							<!-- Deals Slider -->
 							<div class="owl-carousel owl-theme deals_slider">
-								
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="images/deals.png" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Headphones</a></div>
-											<div class="deals_item_price_a ml-auto">$300</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name">Beoplay H7</div>
-											<div class="deals_item_price ml-auto">$225</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Available: <span>6</span></div>
-												<div class="sold_title ml-auto">Already sold: <span>28</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Hurry Up</div>
-												<div class="deals_timer_subtitle">Offer ends in:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span>hours</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span>mins</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span>secs</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="images/deals.png" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Headphones</a></div>
-											<div class="deals_item_price_a ml-auto">$300</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name">Beoplay H7</div>
-											<div class="deals_item_price ml-auto">$225</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Available: <span>6</span></div>
-												<div class="sold_title ml-auto">Already sold: <span>28</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Hurry Up</div>
-												<div class="deals_timer_subtitle">Offer ends in:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer2_hr" class="deals_timer_hr"></div>
-														<span>hours</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer2_min" class="deals_timer_min"></div>
-														<span>mins</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer2_sec" class="deals_timer_sec"></div>
-														<span>secs</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 
-								<!-- Deals Item -->
-								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="images/deals.png" alt=""></div>
-									<div class="deals_content">
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#">Headphones</a></div>
-											<div class="deals_item_price_a ml-auto">$300</div>
-										</div>
-										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name">Beoplay H7</div>
-											<div class="deals_item_price ml-auto">$225</div>
-										</div>
-										<div class="available">
-											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Available: <span>6</span></div>
-												<div class="sold_title ml-auto">Already sold: <span>28</span></div>
-											</div>
-											<div class="available_bar"><span style="width:17%"></span></div>
-										</div>
-										<div class="deals_timer d-flex flex-row align-items-center justify-content-start">
-											<div class="deals_timer_title_container">
-												<div class="deals_timer_title">Hurry Up</div>
-												<div class="deals_timer_subtitle">Offer ends in:</div>
-											</div>
-											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
-													<div class="deals_timer_unit">
-														<div id="deals_timer3_hr" class="deals_timer_hr"></div>
-														<span>hours</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer3_min" class="deals_timer_min"></div>
-														<span>mins</span>
-													</div>
-													<div class="deals_timer_unit">
-														<div id="deals_timer3_sec" class="deals_timer_sec"></div>
-														<span>secs</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
+								<?php
+							      $query = "SELECT * FROM tbl_dow";       
+							      $records_per_page=6;
+							      $newquery = $crud->paging($query,$records_per_page);
+							      $crud->getDeals_of_the_week($newquery);
+							     ?>
+					     </div>
 
 						</div>
 
@@ -429,7 +324,9 @@
 							<div class="deals_slider_next deals_slider_nav"><i class="fas fa-chevron-right ml-auto"></i></div>
 						</div>
 					</div>
-					
+
+					<!-- End Deals -->
+
 					<!-- Featured -->
 					<div class="featured">
 						<div class="tabbed_container">
@@ -445,6 +342,7 @@
 							<!-- Product Panel -->
 							<div class="product_panel panel active">
 								<div class="featured_slider slider">
+<<<<<<< HEAD
 
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
@@ -1388,15 +1286,26 @@
 											</ul>
 										</div>
 									</div>
+=======
+									<?php 
+										for ($i=1; $i <=8 ; $i++) { 
+										
+									 ?>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_6.png" alt=""></div>
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Samsung J330F...</a></div></div>
+=======
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1408,7 +1317,7 @@
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
 											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
+												<li class="product_mark product_discount">-25%</li>
 												<li class="product_mark product_new">new</li>
 											</ul>
 										</div>
@@ -1418,9 +1327,10 @@
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
 										<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_7.png" alt=""></div>
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
+<<<<<<< HEAD
 												<div class="product_name"><div><a href="product.php">Lenovo IdeaPad</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1472,38 +1382,16 @@
 											<div class="product_content">
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
-											<div class="product_content">
-												<div class="product_price">$379</div>
-												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button active">Add to Cart</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1521,7 +1409,11 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
+<<<<<<< HEAD
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1542,61 +1434,16 @@
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
 											<div class="product_content">
-												<div class="product_price">$225</div>
-												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-													<button class="product_cart_button">Add to Cart</button>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_5.png" alt=""></div>
-											<div class="product_content">
-												<div class="product_price">$225</div>
-												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-													<button class="product_cart_button">Add to Cart</button>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_6.png" alt=""></div>
-											<div class="product_content">
+<<<<<<< HEAD
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1608,45 +1455,101 @@
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
 											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
+												<li class="product_mark product_discount">-25%</li>
 												<li class="product_mark product_new">new</li>
 											</ul>
 										</div>
 									</div>
+										<?php 
+										}
+										 ?>
+									
+								</div>
+								<div class="featured_slider_dots_cover"></div>
+							</div>
+
+							<!-- Product Panel -->
+
+							<div class="product_panel panel">
+								<div class="featured_slider slider">
+									<?php 
+										for ($i=1; $i <=6 ; $i++) { 
+											
+										
+									 ?>
 
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_7.png" alt=""></div>
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
-												<div class="product_price">$379</div>
-												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-												<div class="product_extras">
-													<div class="product_color">
-														<input type="radio" checked name="product_color" style="background:#b19c83">
-														<input type="radio" name="product_color" style="background:#000000">
-														<input type="radio" name="product_color" style="background:#999999">
-													</div>
-													<button class="product_cart_button">Add to Cart</button>
-												</div>
-											</div>
-											<div class="product_fav"><i class="fas fa-heart"></i></div>
-											<ul class="product_marks">
-												<li class="product_mark product_discount"></li>
-												<li class="product_mark product_new">new</li>
-											</ul>
-										</div>
-									</div>
-
-									<!-- Slider Item -->
-									<div class="featured_slider_item">
-										<div class="border_active"></div>
-										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_8.png" alt=""></div>
-											<div class="product_content">
+<<<<<<< HEAD
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount">-25%</li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+
+									<!-- Slider Item -->
+									<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
+											<div class="product_content">
+<<<<<<< HEAD
+												<div class="product_price">$225</div>
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_price">$379</div>
+												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button active">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount"></li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+
+									<!-- Slider Item -->
+									<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
+											<div class="product_content">
+												<div class="product_price">$379</div>
+<<<<<<< HEAD
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1663,6 +1566,90 @@
 											</ul>
 										</div>
 									</div>
+
+									<!-- Slider Item -->
+									<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
+											<div class="product_content">
+<<<<<<< HEAD
+												<div class="product_price">$379</div>
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount">-25%</li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+									<?php 
+									}
+									 ?>
+									
+
+								</div>
+								<div class="featured_slider_dots_cover"></div>
+							</div>
+
+							<!-- Product Panel -->
+
+							<div class="product_panel panel">
+								<div class="featured_slider slider">
+									<?php 
+							                for ($i=1; $i <=16; $i++) { 
+
+							                ?>
+								
+
+									<!-- Slider Item -->
+									<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
+											<div class="product_content">
+<<<<<<< HEAD
+												<div class="product_price">$225</div>
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+=======
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount">-25%</li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+								<?php 
+									}
+								 ?>
+
+								
+							
 
 								</div>
 								<div class="featured_slider_dots_cover"></div>
@@ -3937,81 +3924,6 @@
 							<!-- Reviews Slider Item -->
 							<div class="owl-item">
 								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_1.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Roberto Sanchez</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_2.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Brandon Flowers</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_3.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Emilia Clarke</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_1.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Roberto Sanchez</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_2.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Brandon Flowers</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
 									<div><div class="review_image"><img src="images/review_3.jpg" alt=""></div></div>
 									<div class="review_content">
 										<div class="review_name">Emilia Clarke</div>
@@ -4148,6 +4060,7 @@
 		</div>
 	</div>
 
+<<<<<<< HEAD
 	<!-- Brands -->
 
 	<div class="brands">
@@ -4188,6 +4101,32 @@
 	<!-- Footer -->
 
 	<?php include_once'inc/footer.php';?>
+=======
+
+
+
+
+	   
+                 
+
+			<!-- Brands -->
+				<?php echo include_once('inc/brands.php'); ?>
+
+			<!-- end brands -->
+
+			<!-- Newsletter -->
+				<?php echo include_once('inc/newsletter.php') ?>
+
+			<!-- End Newsletter -->
+			<!-- Footer -->
+				<?php echo include_once('inc/footer.php') ?>	
+			<!-- End footer -->
+			<!-- Copyright -->
+				<?php echo include_once('inc/copyright.php') ?>
+			<!--  End Copyright -->
+		
+</div>
+>>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
