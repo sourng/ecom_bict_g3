@@ -30,11 +30,9 @@
 												</ul>
 											</div>
 										</div>
-<<<<<<< HEAD
 										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
-=======
+
 										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="./images/search.png" alt=""></button>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 									</form>
 								</div>
 							</div>
@@ -45,11 +43,9 @@
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-<<<<<<< HEAD
 								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
-=======
+
 								<div class="wishlist_icon"><img src="./images/heart.png" alt=""></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 								<div class="wishlist_content">
 									<div class="wishlist_text"><a href="#">Wishlist</a></div>
 									<div class="wishlist_count">115</div>
@@ -60,11 +56,9 @@
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
-<<<<<<< HEAD
 										<img src="images/cart.png" alt="">
-=======
+
 										<img src="./images/cart.png" alt="">
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">

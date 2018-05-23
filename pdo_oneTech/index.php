@@ -21,25 +21,34 @@
 	<header class="header">
 
 		<!-- Top Bar -->
-		<?php echo include_once('inc/topbar.php'); ?>
 
+<<<<<<< HEAD
  
 		<?php include_once'inc/top_bar.php';?>
 
 		<!-- End Top Bar -->
  
+=======
+		<?php include_once'inc/topbar.php';?>
+		<!-- End Top Bar -->
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 
 		<!-- Header Main -->
-			<?php echo include_once('inc/header_main.php') ?>
 
+<<<<<<< HEAD
  
 		<?php include_once'inc/header_main.php';?>
 		<!-- end header_main -->
  
+=======
+		<?php include_once'inc/header_main.php';?>
+		<!-- end header_main -->
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 		
 		<!-- Main Navigation -->
 			<?php echo include_once('inc/main_navigation.php'); ?>
 
+<<<<<<< HEAD
  
 		<?php include_once'inc/nav.php';?>
 		
@@ -47,9 +56,16 @@
 
 		<!-- End Main Navigation -->
  
+=======
+		<?php //include_once'inc/nav.php';?>
+		
+		
+		<!-- End Main Navigation -->
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 		<!-- Menu -->
-			<?php echo include_once('inc/menu.php') ?>
+			<?php //	 echo include_once('inc/menu.php') ?>
 
+<<<<<<< HEAD
 
 		<div class="page_menu">
 			<div class="container">
@@ -137,6 +153,10 @@
 
 		<!-- end menu -->
  
+=======
+		<!-- end menu -->
+
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 
 	</header>
 	
@@ -1290,7 +1310,10 @@
 										for ($i=1; $i <=8 ; $i++) { 
 										
 									 ?>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
@@ -1298,12 +1321,20 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
  
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Samsung J330F...</a></div></div>
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
  
+=======
+												<div class="product_price">$379</div>
+												<div class="product_name"><div><a href="product.php">Samsung J330F...</a></div></div>
+
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1328,7 +1359,10 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_name"><div><a href="product.php">Lenovo IdeaPad</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1382,7 +1416,10 @@
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1407,11 +1444,17 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
+<<<<<<< HEAD
  
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
  
+=======
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+
+												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1435,6 +1478,7 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
  
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
@@ -1442,6 +1486,12 @@
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
  
+=======
+												<div class="product_price">$379</div>
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+												<div class="product_price discount">$225<span>$300</span></div>
+												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1482,13 +1532,19 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1512,13 +1568,19 @@
 										<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1543,11 +1605,17 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
+<<<<<<< HEAD
  
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
  
+=======
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+
+												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1571,13 +1639,19 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1619,10 +1693,16 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
+<<<<<<< HEAD
  
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
 
+=======
+
+												<div class="product_price">$225</div>
+												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
 
@@ -4099,6 +4179,10 @@
 	<!-- Footer -->
 
 	<?php include_once'inc/footer.php';?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 
 
 
@@ -4123,7 +4207,10 @@
 			<!--  End Copyright -->
 		
 </div>
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4501fa8955f2ce439af38efb36c2caa7749ad271
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
