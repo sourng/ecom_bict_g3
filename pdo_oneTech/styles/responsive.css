@@ -150,11 +150,11 @@
 	{
 		display: none;
 	}
-	.logo_container,
+	/*.logo_container,
 	.wishlist_cart
 	{
 		height: 125px;
-	}
+	}*/
 	.main_nav_content
 	{
 		background: #0e8ce4;
@@ -485,10 +485,10 @@
 		margin-right: -15px;
 		margin-top: 0px;
 	}
-	.main_nav_content
+	/*.main_nav_content
 	{
 		height: 35px;
-	}
+	}*/
 	.cat_menu_container
 	{
 		padding-left: 15px;
