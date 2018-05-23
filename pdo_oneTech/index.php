@@ -21,123 +21,27 @@
 	<header class="header">
 
 		<!-- Top Bar -->
-		<?php echo include_once('inc/topbar.php'); ?>
 
-<<<<<<< HEAD
-		<?php include_once'inc/top_bar.php';?>
-=======
+		<?php include_once'inc/topbar.php';?>
 		<!-- End Top Bar -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 		<!-- Header Main -->
-			<?php echo include_once('inc/header_main.php') ?>
 
-<<<<<<< HEAD
 		<?php include_once'inc/header_main.php';?>
-=======
 		<!-- end header_main -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		
 		<!-- Main Navigation -->
 			<?php echo include_once('inc/main_navigation.php'); ?>
 
-<<<<<<< HEAD
-		<?php include_once'inc/nav.php';?>
+		<?php //include_once'inc/nav.php';?>
 		
 		
-=======
 		<!-- End Main Navigation -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 		<!-- Menu -->
-			<?php echo include_once('inc/menu.php') ?>
+			<?php //	 echo include_once('inc/menu.php') ?>
 
-<<<<<<< HEAD
-		<div class="page_menu">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						
-						<div class="page_menu_content">
-							
-							<div class="page_menu_search">
-								<form action="#">
-									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
-								</form>
-							</div>
-							<ul class="page_menu_nav">
-								<li class="page_menu_item has-children">
-									<a href="#">Language<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li class="page_menu_item has-children">
-									<a href="#">Currency<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li class="page_menu_item">
-									<a href="#">Home<i class="fa fa-angle-down"></i></a>
-								</li>
-								<li class="page_menu_item has-children">
-									<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-										<li class="page_menu_item has-children">
-											<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-											<ul class="page_menu_selection">
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-											</ul>
-										</li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li class="page_menu_item has-children">
-									<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li class="page_menu_item has-children">
-									<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
-									<ul class="page_menu_selection">
-										<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-									</ul>
-								</li>
-								<li class="page_menu_item"><a href="blog.php">blog<i class="fa fa-angle-down"></i></a></li>
-								<li class="page_menu_item"><a href="contact.php">contact<i class="fa fa-angle-down"></i></a></li>
-							</ul>
-							
-							<div class="menu_contact">
-								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>
-								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-=======
 		<!-- end menu -->
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+
 
 	</header>
 	
@@ -1286,12 +1190,11 @@
 											</ul>
 										</div>
 									</div>
-=======
+
 									<?php 
 										for ($i=1; $i <=8 ; $i++) { 
 										
 									 ?>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 									<!-- Slider Item -->
 									<div class="featured_slider_item">
@@ -1299,13 +1202,11 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Samsung J330F...</a></div></div>
-=======
+
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1330,7 +1231,6 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
-<<<<<<< HEAD
 												<div class="product_name"><div><a href="product.php">Lenovo IdeaPad</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1382,9 +1282,8 @@
 											<div class="product_content">
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1409,11 +1308,9 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
-<<<<<<< HEAD
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1437,13 +1334,10 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1484,13 +1378,11 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1514,13 +1406,11 @@
 										<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.html">Apple iPod shuffle</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1545,11 +1435,9 @@
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_3.png" alt=""></div>
 											<div class="product_content">
 												<div class="product_price">$379</div>
-<<<<<<< HEAD
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_name"><div><a href="product.html">Sony MDRZX310W</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1573,13 +1461,11 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_4.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
 												<div class="product_price">$379</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
+
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">LUNA Smartphone</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -1621,13 +1507,12 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
 											<div class="product_content">
-<<<<<<< HEAD
+
 												<div class="product_price">$225</div>
 												<div class="product_name"><div><a href="product.php">Huawei MediaPad...</a></div></div>
-=======
 												<div class="product_price discount">$225<span>$300</span></div>
 												<div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
+
 												<div class="product_extras">
 													<div class="product_color">
 														<input type="radio" checked name="product_color" style="background:#b19c83">
@@ -4101,7 +3986,7 @@
 	<!-- Footer -->
 
 	<?php include_once'inc/footer.php';?>
-=======
+
 
 
 
@@ -4126,7 +4011,6 @@
 			<!--  End Copyright -->
 		
 </div>
->>>>>>> 8217429869e2e00c78e45c344f6078a6a83e0178
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
