@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 		// $data['title']="Hotel List Search Result";			
 		// $data['body']= 'v_home';
 		// $data['dest_count']=$this->m_sourng->count_by_sql("SELECT count(dest_id) as count_dest FROM hotels GROUP BY dest_id",false);
-		$data['hotel_count']=$this->M_impact->("SELECT * FROM tbl_dow);
+		//$data['hotel_count']=$this->M_impact->("SELECT * FROM tbl_dow);
 		
 		$this->load->view('index');	
 	}

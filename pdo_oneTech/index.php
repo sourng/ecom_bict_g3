@@ -2946,19 +2946,19 @@
                  
 
 			<!-- Brands -->
-				<?php echo include_once('inc/brands.php'); ?>
+				<?php include_once('inc/brands.php'); ?>
 
 			<!-- end brands -->
 
 			<!-- Newsletter -->
-				<?php echo include_once('inc/newsletter.php') ?>
+				<?php include_once('inc/newsletter.php') ?>
 
 			<!-- End Newsletter -->
 			<!-- Footer -->
-				<?php echo include_once('inc/footer.php') ?>	
+				<?php include_once('inc/footer.php') ?>	
 			<!-- End footer -->
 			<!-- Copyright -->
-				<?php echo include_once('inc/copyright.php') ?>
+				<?php include_once('inc/copyright.php') ?>
 			<!--  End Copyright -->
 		
 <script src="js/jquery-3.3.1.min.js"></script>

@@ -1,4 +1,4 @@
-<?php echo include_once('inc/header.php') ?>
+<?php include_once('inc/header.php') ?>
 
 <body>
 
@@ -9,21 +9,21 @@
 	<header class="header">
 
 		<!-- Top Bar -->
-		<?php echo include_once('inc/topbar.php'); ?>
+		<?php include_once('inc/topbar.php'); ?>
 
 		<!-- End Top Bar -->
 
 		<!-- Header Main -->
-			<?php echo include_once('inc/header_main.php') ?>
+			<?php include_once('inc/header_main.php') ?>
 
 		<!-- end header_main -->
 		
 		<!-- Main Navigation -->
-			<?php echo include_once('inc/main_navigation.php'); ?>
+			<?php include_once('inc/main_navigation.php'); ?>
 
 		<!-- End Main Navigation -->
 		<!-- Menu -->
-			<?php echo include_once('inc/menu.php') ?>
+			<?php include_once('inc/menu.php') ?>
 
 		<!-- end menu -->
 
@@ -111,14 +111,14 @@
 	</div>
 
 	<!-- Newsletter -->
-		<?php echo include_once('inc/newsletter.php') ?>
+		<?php include_once('inc/newsletter.php') ?>
 
 	<!-- End Newsletter -->
 	<!-- Footer -->
-		<?php echo include_once('inc/footer.php') ?>	
+		<?php include_once('inc/footer.php') ?>	
 	<!-- End footer -->
 	<!-- Copyright -->
-		<?php echo include_once('inc/copyright.php') ?>
+		<?php include_once('inc/copyright.php') ?>
 	<!--  End Copyright -->
 </div>
 

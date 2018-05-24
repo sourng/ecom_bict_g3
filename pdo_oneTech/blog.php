@@ -1,4 +1,4 @@
-<?php echo include_once('inc/header.php') ?>
+<?php include_once('inc/header.php') ?>
 
 <body>
 
@@ -9,21 +9,21 @@
 	<header class="header">
 
 		<!-- Top Bar -->
-		<?php echo include_once('inc/topbar.php'); ?>
+		<?php include_once('inc/topbar.php'); ?>
 
 		<!-- End Top Bar -->
 
 		<!-- Header Main -->
-			<?php echo include_once('inc/header_main.php') ?>
+			<?php include_once('inc/header_main.php') ?>
 
 		<!-- end header_main -->
 		
 		<!-- Main Navigation -->
-			<?php echo include_once('inc/main_navigation.php'); ?>
+			<?php include_once('inc/main_navigation.php'); ?>
 
 		<!-- End Main Navigation -->
 		<!-- Menu -->
-			<?php echo include_once('inc/menu.php') ?>
+			<?php include_once('inc/menu.php') ?>
 
 		<!-- end menu -->
 
@@ -50,63 +50,63 @@
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_1.jpg)"></div>
 							<div class="blog_text">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada.</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_2.jpg)"></div>
 							<div class="blog_text">Cras lobortis nisl nec libero pulvinar lacinia. Nunc sed ullamcorper massa.</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_3.jpg)"></div>
 							<div class="blog_text">Fusce tincidunt nulla magna, ac euismod quam viverra id. Fusce eget metus feugiat</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_4.jpg)"></div>
 							<div class="blog_text">Etiam leo nibh, consectetur nec orci et, tempus tempus ex</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_5.jpg)"></div>
 							<div class="blog_text">Sed viverra pellentesque dictum. Aenean ligula justo, viverra in lacus porttitor</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_6.jpg)"></div>
 							<div class="blog_text">In nisl tortor, tempus nec ex vitae, bibendum rutrum mi. Integer tempus nisi</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_7.jpg)"></div>
 							<div class="blog_text">Make Life Easier on Yourself by Accepting “Good Enough.” Don’t Pursue Perfection.</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_8.jpg)"></div>
 							<div class="blog_text">13 Reasons You Are Failing At Life And Becoming A Bum</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 
 						<!-- Blog post -->
 						<div class="blog_post">
 							<div class="blog_image" style="background-image:url(images/blog_9.jpg)"></div>
 							<div class="blog_text">4 Steps to Getting Anything You Want In Life</div>
-							<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
+							<div class="blog_button"><a href="blog_single.php">Continue Reading</a></div>
 						</div>
 						
 					</div>
@@ -117,14 +117,14 @@
 	</div>
 
 	<!-- Newsletter -->
-		<?php echo include_once('inc/newsletter.php') ?>
+		<?php include_once('inc/newsletter.php') ?>
 
 	<!-- End Newsletter -->
 	<!-- Footer -->
-		<?php echo include_once('inc/footer.php') ?>	
+		<?php include_once('inc/footer.php') ?>	
 	<!-- End footer -->
 	<!-- Copyright -->
-		<?php echo include_once('inc/copyright.php') ?>
+		<?php include_once('inc/copyright.php') ?>
 	<!--  End Copyright -->
 
 	
@@ -144,4 +144,4 @@
 <script src="js/blog_custom.js"></script>
 </body>
 
-</html>
+</php>
