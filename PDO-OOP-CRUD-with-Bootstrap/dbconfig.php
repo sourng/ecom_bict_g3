@@ -3,7 +3,7 @@
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "";
-$DB_name = "ci_ecommerce";
+$DB_name = "dbpdo";
 
 
 try
