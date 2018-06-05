@@ -3,12 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+
+	  public function __construct()
+{
+    parent::__construct();
+
+    $this->load->model('M_Crud','mcrud');        
+}
+
 	public function index()
 	{
-		// $data['title']="Hotel List Search Result";			
-		// $data['body']= 'v_home';
-		// $data['dest_count']=$this->m_sourng->count_by_sql("SELECT count(dest_id) as count_dest FROM hotels GROUP BY dest_id",false);
-		//$data['hotel_count']=$this->M_impact->("SELECT * FROM tbl_dow);
+	
 		
 		$this->load->view('index');	
 	}
