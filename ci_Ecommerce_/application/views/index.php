@@ -108,16 +108,7 @@
                      <div class="product-slider">     
                    
                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-                    <?php $this->load->view('inc/products_index.php') ?>
-
+                   
                     </div>
                     <!-- /.product-slider -->
 

@@ -13,7 +13,7 @@ class crud
 	{
 		try
 		{
-			$stmt = $this->db->prepare("INSERT INTO tbl_users(fname,lname,user_email,user_login) VALUES(:fname, :lname, :user_email, :user_login)");
+			$stmt = $this->db->prepare("INSERT INTO users(fname,lname,user_email,user_login) VALUES(:fname, :lname, :user_email, :user_login)");
 			$stmt->bindparam(":fname",$fname);
 			$stmt->bindparam(":lname",$lname);
 			$stmt->bindparam(":user_email",$user_email);
@@ -31,7 +31,7 @@ class crud
 	
 	public function getID($id)
 	{
-		$stmt = $this->db->prepare("SELECT * FROM tbl_users WHERE User_id=:id");
+		$stmt = $this->db->prepare("SELECT * FROM users WHERE user_id=:id");
 		$stmt->execute(array(":id"=>$id));
 		$editRow=$stmt->fetch(PDO::FETCH_ASSOC);
 		return $editRow;
@@ -41,11 +41,11 @@ class crud
 	{
 		try
 		{
-			$stmt=$this->db->prepare("UPDATE tbl_users SET fname=:fname, 
+			$stmt=$this->db->prepare("UPDATE users SET fname=:fname, 
 		                                               lname=:lname, 
 													   user_email=:user_email, 
 													   user_login=:user_login
-													WHERE User_id=:id ");
+													WHERE user_id=:id ");
 			$stmt->bindparam(":fname",$fname);
 			$stmt->bindparam(":lname",$lname);
 			$stmt->bindparam(":user_email",$email);
@@ -64,7 +64,7 @@ class crud
 	
 	public function delete($id)
 	{
-		$stmt = $this->db->prepare("DELETE FROM tbl_users WHERE User_ID=:id");
+		$stmt = $this->db->prepare("DELETE FROM users WHERE user_id=:id");
 		$stmt->bindparam(":id",$id);
 		$stmt->execute();
 		return true;
@@ -83,16 +83,16 @@ class crud
 			{
 				?>
                 <tr>
-                <td><?php print($row['User_ID']); ?></td>
+                <td><?php print($row['user_id']); ?></td>
                 <td><?php print($row['fname']); ?></td>
                 <td><?php print($row['lname']); ?></td>
                 <td><?php print($row['user_email']); ?></td>
                 <td><?php print($row['user_login']); ?></td>
                 <td align="center">
-                <a href="edit-data.php?edit_id=<?php print($row['User_ID']); ?>"><i class="glyphicon glyphicon-edit"></i></a>
+                <a href="edit-data.php?edit_id=<?php print($row['user_id']); ?>"><i class="glyphicon glyphicon-edit"></i></a>
                 </td>
                 <td align="center">
-                <a href="delete.php?delete_id=<?php print($row['User_ID']); ?>"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                <a href="delete.php?delete_id=<?php print($row['user_id']); ?>"><i class="glyphicon glyphicon-remove-circle"></i></a>
                 </td>
                 </tr>
                 <?php

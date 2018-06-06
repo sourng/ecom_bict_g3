@@ -1,18 +1,21 @@
 
-                        <!-- /.col-md-4 -->
-
+                <!-- /.col-md-4 -->
+                <?php 
+                    foreach ($get_products as $rows){ 
+                ?>
+                            
                         <div class="item">
                             <div class="product">
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="<?php echo base_url(); ?><?php echo $rows['image'];?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="<?php echo base_url(); ?><?php echo $rows['image2'];?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
@@ -47,5 +50,7 @@
                             <!-- /.product -->
                         </div>
 
-                       
+                    <?php
+                        }
+                    ?>
 
