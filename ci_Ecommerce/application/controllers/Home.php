@@ -14,8 +14,11 @@ class Home extends CI_Controller {
 	public function index()
 	{
 	
+		$data=array();
+		$hotThisWeek="SELECT * FROM tbl_products";
+		$data['hotThisWeek']=$this->mcrud->get_by_sql($hotThisWeek);
 		
-		$this->load->view('index');	
+		$this->load->view('index',$data);
 	}
 	
 	public function category()
