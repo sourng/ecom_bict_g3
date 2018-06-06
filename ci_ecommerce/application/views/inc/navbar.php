@@ -36,13 +36,13 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-    											 <li><a href="<?php echo site_url(); ?>category">T-shirts</a></li>
+    											 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>Shoes</h5>
                                             <ul>
-                                                <li><a href="<?php echo site_url(); ?>category">Trainers</a></li>
+                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
