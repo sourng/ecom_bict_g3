@@ -42,7 +42,7 @@ class Home extends CI_Controller {
              //                                                  ");
 
             $data['body']= 'index';
-            $this->load->view('index',$data);
+            $this->load->view('front/index',$data);
 	}
 	
 	public function category(){
