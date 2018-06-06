@@ -32,9 +32,15 @@ class M_Impact extends CI_Model {
 		if(!empty($query))
 		{	
 			$data = array();
-			if ( $query->num_rows() > 0 )
+			if ( $query->num_rows() > 0 ){
+
 				$data = $query->result_array();
-			return $data;
+				return $data;
+			}else {
+				//redirection('home');
+				header("location:home");
+			}
+			
 		}	
 	}
 	

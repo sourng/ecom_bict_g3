@@ -75,10 +75,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="box">
-                                <h1 class="text-center">White Blouse Armani</h1>
+                                <h1 class="text-center"><?php echo $getDetail[0]['name']; ?></h1>
                                 <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
                                 </p>
-                                <p class="price">$124.00</p>
+                                <p class="price"><?php echo $getDetail[0]['price']; ?></p>
 
                                 <p class="text-center buttons">
                                     <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
