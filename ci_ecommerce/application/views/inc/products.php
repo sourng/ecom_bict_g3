@@ -1,4 +1,6 @@
-                                       
+    <?php foreach ($getpruduct as $row) {
+    
+     ?>                                       
 
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
@@ -6,18 +8,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image']; ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image2']; ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image3']; ?>" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
                                     <h3><a href="<?php echo site_url(); ?>home/detail">White Blouse Armani</a></h3>
@@ -50,4 +52,5 @@
                             <!-- /.product -->
                         </div>
                         <!-- /.col-md-4 -->
+                    <?php } ?>
                    

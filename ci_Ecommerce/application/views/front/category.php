@@ -92,11 +92,7 @@
                    <div class="row products"> 
 
                    <?php $this->load->view('inc/products.php') ?>
-                   <?php $this->load->view('inc/products.php') ?>
-                   <?php $this->load->view('inc/products.php') ?>
-                   <?php $this->load->view('inc/products.php') ?>
-                   <?php $this->load->view('inc/products.php') ?>
-                   <?php $this->load->view('inc/products.php') ?>
+                   
                </div>
                     <!-- /.products  end-->
 

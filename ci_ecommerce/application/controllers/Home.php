@@ -27,9 +27,7 @@ class Home extends CI_Controller {
                                                               WHERE status=1 
                                                               AND position=1 
                                                               AND deleted=1");*/
-             $data['get_products'] =$this->m_impact->get_by_sql("SELECT *
-                                                              FROM products
-                                                              ");
+             $data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
 // Get rooms
              // $data['rooms'] =$this->m_impact->get_by_sql("SELECT rooms.*,room_rates.price 
              //                                                  FROM rooms 
@@ -46,8 +44,11 @@ class Home extends CI_Controller {
 	}
 	
 	public function category(){
+		$data['getcategory'] = $this->m_impact->get_by_sql("SELECT * FROM category");
+		$data['getpruduct'] = $this->m_impact->get_by_sql("SELECT * FROM products");
 
-		$this->load->view('front/category');
+		$this->load->view('front/category',$data);
+		;
 		
 	}
 
