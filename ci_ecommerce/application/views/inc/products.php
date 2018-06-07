@@ -17,15 +17,15 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                <a href="detail.html" class="invisible">
+                                <2/div>
+                                <a href="<?php echo site_url('home/detail/'.$row['id']); ?>" class="invisible">
                                     <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image3']; ?>" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="<?php echo site_url(); ?>home/detail">White Blouse Armani</a></h3>
+                                    <h3><a href="<?php echo site_url('home/detail/'.$row['id']); ?>">White Blouse Armani</a></h3>
                                     <p class="price"><del>$280</del> $143.00</p>
                                     <p class="buttons">
-                                        <a href="<?php echo site_url(); ?>home/detail" class="btn btn-default">View detail</a>
+                                        <a href="<?php echo site_url('home/detail/'.$row['id']); ?>" class="btn btn-default">View detail</a>
                                         <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
                                 </div>
