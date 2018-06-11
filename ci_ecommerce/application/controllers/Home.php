@@ -17,23 +17,33 @@ class Home extends CI_Controller {
 
 	public function index(){
 
-        $data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
-            $data['body']= 'index';
-            $this->load->view('front/index',$data);
+		// $wheres = array('rate' => 1 );
+
+	    $data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
+        $data['body']= 'index';
+
+        $this->load->view('front/index',$data);
 	}
 	
 	public function category(){
 		 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT * FROM category");
-		 $data['getpruduct'] = $this->m_impact->get_by_sql("SELECT * FROM products");
+		 $data['get_products'] = $this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
 
+		$data['body']= 'index';
 		$this->load->view('front/category',$data);
 		
 		
 	}
 
 		public function detail($id){
+<<<<<<< HEAD
 		$data['getDetail'] =$this->m_impact->get_by_sql("SELECT * FROM products where id='$id'");
+=======
 
+		$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
+>>>>>>> f06d92b7476674d516f458d3f95f3ca202d46d32
+
+		$data['body']= 'index';
 		$this->load->view('front/detail',$data);
 		
 	}
