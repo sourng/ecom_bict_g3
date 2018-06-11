@@ -27,11 +27,11 @@ class Home extends CI_Controller {
 		 $data['getpruduct'] = $this->m_impact->get_by_sql("SELECT * FROM products");
 
 		$this->load->view('front/category',$data);
-		;
+		
 		
 	}
 
-		public function detail($id=1){
+		public function detail($id){
 		$data['getDetail'] =$this->m_impact->get_by_sql("SELECT * FROM products where id='$id'");
 
 		$this->load->view('front/detail',$data);

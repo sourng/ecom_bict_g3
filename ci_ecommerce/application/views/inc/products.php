@@ -1,17 +1,16 @@
-    <?php foreach ($getcategory as $row) {    
-     ?>                                       
+                                     
 
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
+                                            <a href="<?php echo site_url('home/detail/'.$row[0]['id']); ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image']; ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                           <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
+                                           <a href="<?php echo site_url('home/detail/'.$row[0]['id']); ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image2']; ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
@@ -51,5 +50,5 @@
                             <!-- /.product -->
                         </div>
                         <!-- /.col-md-4 -->
-                    <?php } ?>
+                    ss
                    
