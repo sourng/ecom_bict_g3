@@ -1,30 +1,28 @@
-    <?php foreach ($getproducts as $row) {    
-     ?>                                       
 
                         <div class="col-md-4 col-sm-6">
                             <div class="product">
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
-                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image']; ?>" alt="" class="img-responsive">
+                                            <a href="">
+                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'];?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                           <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
-                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image2']; ?>" alt="" class="img-responsive">
+                                           <a href="">
+                                                <img src="<?php echo base_url(); ?>public/img/<?php echo $getproducts[0]['image2'];  ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
-                                <2/div>
-                                <a href="<?php echo site_url('home/detail/'.$row['id']); ?>" class="invisible">
-                                    <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image3']; ?>" alt="" class="img-responsive">
+                                </div>
+                                <a href="" class="invisible">
+                                    <img src="" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="<?php echo site_url('home/detail/'.$row['id']); ?>">White Blouse Armani</a></h3>
+                                    <h3><a href="">White Blouse Armani</a></h3>
                                     <p class="price"><del>$280</del> $143.00</p>
                                     <p class="buttons">
-                                        <a href="<?php echo site_url('home/detail/'.$row['id']); ?>" class="btn btn-default">View detail</a>
+                                        <a href="" class="btn btn-default">View detail</a>
                                         <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </p>
                                 </div>
@@ -51,5 +49,4 @@
                             <!-- /.product -->
                         </div>
                         <!-- /.col-md-4 -->
-                    <?php } ?>
                    

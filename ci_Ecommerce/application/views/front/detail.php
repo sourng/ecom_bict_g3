@@ -57,7 +57,7 @@
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                                <img src="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image'] ?> alt="" class="img-responsive">
+                                <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?> alt="" class="img-responsive">
                             </div>
 
                             <div class="ribbon sale">
@@ -75,10 +75,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="box">
-                                <h1 class="text-center"><?php echo $getDetail[0]['name']; ?></h1>
+                                <h1 class="text-center"><?php echo $get_products[0]['name']; ?></h1>
                                 <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
                                 </p>
-                                <p class="price"><?php echo $getDetail[0]['price']; ?></p>
+                                <p class="price"><?php echo $get_products[0]['price']; ?></p>
 
                                 <p class="text-center buttons">
                                     <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
@@ -91,18 +91,18 @@
                             <div class="row" id="thumbs">
                                 
                                 <div class="col-xs-4">
-                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image'] ;?>" class="thumb">
-                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image'] ?>" alt="" class="img-responsive">
+                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ;?>" class="thumb">
+                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image2']; ?>" class="thumb">
-                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image2'] ?>" alt="" class="img-responsive">
+                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image2']; ?>" class="thumb">
+                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image2'] ?>" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image3']; ?>" class="thumb">
-                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $getDetail[0]['image3']; ?>" alt="" class="img-responsive">
+                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image3']; ?>" class="thumb">
+                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image3']; ?>" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 
@@ -148,7 +148,7 @@
                     </div>
 
                   
-                          <?php foreach ($getDetail as $row) {
+                          <?php foreach ($get_products as $row) {
     
                          ?>  
                            <div class="row same-height-row">
