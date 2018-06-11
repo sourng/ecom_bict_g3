@@ -1,5 +1,4 @@
-    <?php foreach ($getpruduct as $row) {
-    
+    <?php foreach ($getproducts as $row) {    
      ?>                                       
 
                         <div class="col-md-4 col-sm-6">

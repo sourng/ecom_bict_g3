@@ -17,35 +17,14 @@ class Home extends CI_Controller {
 
 	public function index(){
 
-		$data['title']="Resort Booking";
-        $data['meta_keywords']="Resort, Booking, Star, Hotel, Information, keywords";
-        $data['meta_description']="Star Hotel Information Home description";
-
-// Show Slider 
-            /*data['get_slides'] =$this->m_impact->get_by_sql("SELECT * 
-                                                              FROM rooms 
-                                                              WHERE status=1 
-                                                              AND position=1 
-                                                              AND deleted=1");*/
         $data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
-// Get rooms
-             // $data['rooms'] =$this->m_impact->get_by_sql("SELECT rooms.*,room_rates.price 
-             //                                                  FROM rooms 
-             //                                                  inner join room_rates 
-             //                                                  ON rooms.rate_id=room_rates.rate_id 
-             //                                                  WHERE status=1 
-             //                                                  AND position=1
-             //                                                  AND deleted=1
-             //                                                  LIMIT 4
-             //                                                  ");
-
             $data['body']= 'index';
             $this->load->view('front/index',$data);
 	}
 	
 	public function category(){
-		$data['getcategory'] = $this->m_impact->get_by_sql("SELECT * FROM category");
-		$data['getpruduct'] = $this->m_impact->get_by_sql("SELECT * FROM products");
+		 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT * FROM category");
+		 $data['getpruduct'] = $this->m_impact->get_by_sql("SELECT * FROM products");
 
 		$this->load->view('front/category',$data);
 		;
