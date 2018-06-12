@@ -17,33 +17,22 @@
     <!-- /#navbar -->
 
     <!-- *** NAVBAR END *** -->
-
-
-
     <div id="all">
-
-        <div id="content">
-
-            <div class="container">
-                <div class="col-md-12">
+        <div id="content">  
+            <div class="container">               
+                <div class="col-md-12">                     
                     <div id="main-slider">
+                        <?php foreach ($get_banners as $row) {   ?>
                         <div class="item">
-                            <img src="<?php echo base_url(); ?>public/img/main-slider1.jpg" alt="" class="img-responsive">
+                            <img src="<?php echo base_url(); ?>public/img/<?php echo $row['banner_image']; ?>" alt="" class="img-responsive">
                         </div>
-                        <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url(); ?>public/img/main-slider2.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url(); ?>public/img/main-slider3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url(); ?>public/img/main-slider4.jpg" alt="">
-                        </div>
+                        <?php } ?>                                             
                     </div>
-                    <!-- /#main-slider -->
+                    <!-- /#main-slider -->                    
                 </div>
+                 
             </div>
-
+       
             <!-- *** ADVANTAGES HOMEPAGE ***
  _________________________________________________________ -->
 
@@ -71,7 +60,6 @@
                                 <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
                             </div>
                         </div>
-
                         <div class="col-sm-4">
                             <div class="box same-height clickable">
                                 <div class="icon"><i class="fa fa-thumbs-up"></i>
@@ -83,19 +71,14 @@
                         </div>
                     </div>
                     <!-- /.row -->
-
                 </div>
                 <!-- /.container -->
-
             </div>
             <!-- /#advantages -->
-
             <!-- *** ADVANTAGES END *** -->
-
             <!-- *** HOT PRODUCT SLIDESHOW ***
  _________________________________________________________ -->
             <div id="hot">
-
                 <div class="box">
                     <div class="container">
                         <div class="col-md-12">
@@ -103,49 +86,34 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="container">
-                     <div class="product-slider">     
-                   
-                   <?php $this->load->view('inc/hotThisWeek.php') ?>
-                   
+                     <div class="product-slider">
+                   <?php $this->load->view('inc/hotThisWeek.php') ?>                   
                     </div>
                     <!-- /.product-slider -->
-
                 </div>
-
-
-
                 <!-- /.container -->
-
             </div>
             <!-- /#hot -->
-
             <!-- *** HOT END *** -->
 
             <!-- *** GET INSPIRED ***
- _________________________________________________________ -->
+
+            ____________________________________________________ -->
             <div class="container" data-animate="fadeInUpBig">
                 <div class="col-md-12">
                     <div class="box slideshow">
                         <h3>Get Inspired</h3>
                         <p class="lead">Get the inspiration from our world class designers</p>
                         <div id="get-inspired" class="owl-carousel owl-theme">
+                            <?php foreach ($get_inpired as $row) { ?>
                             <div class="item">
                                 <a href="#">
-                                    <img src="<?php echo base_url(); ?>public/img/getinspired1.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>public/img/<?php echo $row['inpired_image']; ?>" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img src="<?php echo base_url(); ?>public/img/getinspired2.jpg" alt="Get inspired" class="img-responsive">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img src="<?php echo base_url(); ?>public/img/getinspired3.jpg" alt="Get inspired" class="img-responsive">
-                                </a>
-                            </div>
+                            <?php } ?>
+                            
                         </div>
                     </div>
                 </div>
@@ -155,16 +123,16 @@
             <!-- *** BLOG HOMEPAGE ***
  _________________________________________________________ -->
 
-            <div class="box text-center" data-animate="fadeInUp">
+          <!--   <div class="box text-center" data-animate="fadeInUp">
                 <div class="container">
                     <div class="col-md-12">
                         <h3 class="text-uppercase">From our blog</h3>
 
-                        <p class="lead">What's new in the world of fashion? <a href="blog.html">Check our blog!</a>
+                        <p class="lead">What's new in the world of fashion? <a href="<?php echo site_url() ?>home/blog">Check our blog!</a>
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="container">
 

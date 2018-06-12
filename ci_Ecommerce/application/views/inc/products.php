@@ -19,8 +19,8 @@
                                     <img src="" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="">White Blouse Armani</a></h3>
-                                    <p class="price"><del>$280</del> $143.00</p>
+                                    <h3><a href=""><?php echo $get_products[0]['name']; ?></a></h3>
+                                    <p class="price"><del><?php echo $get_products[0]['price'] ?></del> <?php echo $get_products[0]['discount']; ?></p>
                                     <p class="buttons">
                                         <a href="" class="btn btn-default">View detail</a>
                                         <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
