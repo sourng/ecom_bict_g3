@@ -27,26 +27,18 @@ class Home extends CI_Controller {
 	}
 	
 	public function category(){
-		 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT * FROM category");
-		 $data['get_products'] = $this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
-
+		 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id");
+		// $data['get_products'] = $this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
 		$data['body']= 'index';
 		$this->load->view('front/category',$data);
-		
-		
 	}
-
 		public function detail($id){
-
 		$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
 		$data['body']= 'index';
-		$this->load->view('front/detail',$data);
-		
+		$this->load->view('front/detail',$data);		
 	}
 		public function text(){
-
-		$this->load->view('front/text');
-		
+		$this->load->view('front/text');		
 	}
 		public function category_full(){
 

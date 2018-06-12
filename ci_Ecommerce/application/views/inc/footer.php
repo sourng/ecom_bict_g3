@@ -3,11 +3,9 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <h4>Pages</h4>
-
                         <ul>
                             <li><a href="<?php echo site_url(); ?>home/text">About us</a></li>
-                            <li><a href="<?php echo site_url(); ?>home/text">Terms and conditions</a></li>
-                          
+                            <li><a href="<?php echo site_url(); ?>home/text">Terms and conditions</a></li>                          
                         </ul>
                         <hr>
                         <h4>User section</h4>
