@@ -55,13 +55,13 @@
 
                         <h4>Where to find us</h4>
 
-                        <p><strong>Obaju Ltd.</strong>
-                            <br>13/25 New Avenue
-                            <br>New Heaven
-                            <br>45Y 73J
-                            <br>England
+                        <p><strong>Regional Politechnic Techo Sen Siem Reap</strong>
+                            <br>St.National 6
+                            <br>bonteay Chas
+                            <br>Siem Reap 
+                            <br>Cambodia
                             <br>
-                            <strong>Great Britain</strong>
+                            <strong>Great Khmer</strong>
                         </p>
 
                         <a href="<?php echo site_url(); ?>home/contact">Go to contact page</a>
