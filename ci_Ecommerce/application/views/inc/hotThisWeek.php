@@ -23,7 +23,7 @@
                                 </a>
                                 <div class="text">
                                     <h3><a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'];?>"><?php echo $row['name']; ?></a></h3>
-                                    <p class="price"><del><?php echo $row['price']; ?></del> <?php echo $row['discount']; ?></p>
+                                    <p class="price">$ <del><?php echo $row['price']; ?></del> $ <?php echo $row['discount']-($row['discount']*$row['discount']/100) ?></p>
                                 </div>
                                 <!-- /.text -->
 

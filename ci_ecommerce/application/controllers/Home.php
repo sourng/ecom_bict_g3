@@ -18,8 +18,8 @@ class Home extends CI_Controller {
 	public function index(){
 
 		// $wheres = array('rate' => 1 );
-		$data['get_banners'] =$this->m_impact->get_by_sql("SELECT * FROM tbl_banner");
-		$data['get_inpired'] = $this->m_impact->get_by_sql("SELECT * FROM tbl_inspired");
+		$data['get_banners'] =$this->m_impact->get_by_sql("SELECT * FROM banner");
+		$data['get_inpired'] = $this->m_impact->get_by_sql("SELECT * FROM inspired");
 	    $data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
         $data['body']= 'index';
 
