@@ -44,10 +44,12 @@ class Home extends CI_Controller {
 
 			$this->load->view('front/category_full');
 		}
-		public function category_right(){
+		public function category_right(){			
+			$data['get_shoes'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id WHERE c.category_id=7");
+			$data['body']= 'index';
+			$this->load->view('front/category_right',$data);
+		}	
 
-			$this->load->view('front/category_right');
-		}
 			public function register(){
 
 			$this->load->view('front/register');
