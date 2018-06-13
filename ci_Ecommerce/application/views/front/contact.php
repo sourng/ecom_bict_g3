@@ -56,19 +56,20 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-map-marker"></i> Address</h3>
-                                <p>13/25 New Avenue
-                                    <br>New Heaven
-                                    <br>45Y 73J
-                                    <br>England
-                                    <br>
-                                    <strong>Great Britain</strong>
-                                </p>
+                                <p><strong>Regional Politechnic Techo Sen Siem Reap</strong>
+                            <br>St.National 6
+                            <br>bonteay Chas
+                            <br>Siem Reap 
+                            <br>Cambodia
+                            <br>
+                            <strong>Great Khmer</strong>
+                        </p>
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
                                 <h3><i class="fa fa-phone"></i> Call center</h3>
                                 <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
-                                <p><strong>+33 555 444 333</strong>
+                                <p><strong>+855 87335930</strong>
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
