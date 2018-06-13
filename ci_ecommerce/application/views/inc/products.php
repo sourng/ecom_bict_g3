@@ -22,7 +22,7 @@
                                     <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image3']; ?>" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="<?php echo site_url(); ?>home/detail">White Blouse Armani</a></h3>
+                                    <h3><a href="<?php echo site_url(); ?>home/detail"><?php echo $row ['image3']?></a></h3>
                                     <p class="price"><del>$280</del> $143.00</p>
                                     <p class="buttons">
                                         <a href="<?php echo site_url(); ?>home/detail" class="btn btn-default">View detail</a>
