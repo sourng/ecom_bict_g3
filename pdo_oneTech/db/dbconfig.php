@@ -1,16 +1,13 @@
 <?php
 
-<<<<<<< HEAD
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "";
 $DB_name = "ci_ecommerce";
-=======
 	$DB_host = "localhost";
 	$DB_user = "root";
 	$DB_pass = "";
 	$DB_name = "ci_ecommerce";
->>>>>>> c9c250d6e7f1bc21db53eee23ca598ef933fb435
 
 
 	try

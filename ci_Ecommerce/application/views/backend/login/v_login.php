@@ -85,17 +85,21 @@
                                         <label for="username" class="field-label text-muted fs18 mb10">Your Email</label>
                                         <label for="username" class="field prepend-icon">
                                             <input type="text" name="email" id="username" class="gui-input" placeholder="Enter Email" required="">
-                                            <label for="username" class="field-icon"><i class="fa fa-user"></i>
+                                            <label for="username" class="field-icon">
+                                                <i class="fa fa-user"></i>
                                             </label>
                                         </label>
                                     </div>
                                     <!-- end section -->
 
                                     <div class="section">
-                                        <label for="username" class="field-label text-muted fs18 mb10">Password</label>
+                                        <label for="username" class="field-label text-muted fs18 mb10">
+                                            Password
+                                        </label>
                                         <label for="password" class="field prepend-icon">
                                             <input type="password" name="password" id="password" class="gui-input" placeholder="Enter password" required="">
-                                            <label for="password" class="field-icon"><i class="fa fa-lock"></i>
+                                            <label for="password" class="field-icon">
+                                                <i class="fa fa-lock"></i>
                                             </label>
                                         </label>
                                     </div>

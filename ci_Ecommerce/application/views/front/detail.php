@@ -1,5 +1,5 @@
-<?php $this->load->view('inc/head.php') ?>
-<body>
+    <?php $this->load->view('inc/head.php') ?>
+    <body>
     <!-- *** TOPBAR ***
  _________________________________________________________ -->
     <?php $this->load->view('inc/topbar.php') ?>
@@ -147,11 +147,11 @@
                     </div>
 
                   
-                          <?php foreach ($get_products as $row) {
-    
-                         ?>  
-                           <div class="row same-height-row">
-
+                
+                    <div class="row same-height-row">
+                        <?php 
+                            foreach ($get_relative as $row) {
+                        ?>  
                         <div class="col-md-3 col-sm-6">
                             <div class="product same-height">
                                 <div class="flip-container">
@@ -172,16 +172,17 @@
                                     <img src="<?php echo base_url(); ?>public/img/product3.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3>Fur coat</h3>
-                                    <p class="price">$143</p>
+                                    <h3><a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'];?>"><?php echo $row['name']; ?></a></h3>
+                                    <p class="price">$ <del><?php echo $row['price']; ?></del> $ <?php echo $row['price']-($row['price']*$row['discount']/100) ?></p>
 
                                 </div>
                             </div>
                             <!-- /.product -->
                         </div>
-                    
+                    <?php 
+                        } 
+                    ?>
                     </div>
-                    <?php } ?>
 
                 </div>
                 <!-- /.col-md-9 -->

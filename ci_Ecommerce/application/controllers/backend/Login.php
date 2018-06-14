@@ -151,7 +151,7 @@ class Login extends CI_Controller {
 
         $email 	  = $this->input->post('email');
 
-        $result = $this->m_user->login($email,'');
+        $result = $this->m_user->login($email,$password);
 
 
         // check for result
@@ -246,7 +246,7 @@ class Login extends CI_Controller {
 
                     'gro_id'			=> $result[0]['gro_id'],
 
-                    'group_name'            => $result[0]['group_name'],
+                    'group_name'        => $result[0]['group_name'],
 
                     'group_level'		=> $result[0]['level'],
 

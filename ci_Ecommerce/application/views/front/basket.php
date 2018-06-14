@@ -121,17 +121,20 @@
                             </div>
                         </div>
 
+                    <?php 
+                        foreach ($get_products as $row) {
+                    ?>
                         <div class="col-md-3 col-sm-6">
                             <div class="product same-height">
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="<?php echo site_url(); ?>home/detail">
+                                            <a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'];?>">
                                                 <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="<?php echo site_url(); ?>home/detail">
+                                            <a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'];?>">
                                                 <img src="<?php echo base_url(); ?>public/img/product2_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
@@ -141,66 +144,16 @@
                                     <img src="<?php echo base_url(); ?>public/img/product2.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3>Fur coat</h3>
-                                    <p class="price">$143</p>
+                                    <h3><a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'];?>"><?php echo $row['name']; ?></a></h3>
+                                    <p class="price">$ <del><?php echo $row['price']; ?></del> $ <?php echo $row['price']-($row['price']*$row['discount']/100) ?></p>
                                 </div>
                             </div>
                             <!-- /.product -->
                         </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product same-height">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product1.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product1_2.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="<?php echo site_url(); ?>home/detail" class="invisible">
-                                    <img src="<?php echo base_url(); ?>public/img/product1.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3>Fur coat</h3>
-                                    <p class="price">$143</p>
-                                </div>
-                            </div>
-                            <!-- /.product -->
-                        </div>
-
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="product same-height">
-                                <div class="flip-container">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product3.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                        <div class="back">
-                                            <a href="<?php echo site_url(); ?>home/detail">
-                                                <img src="<?php echo base_url(); ?>public/img/product3_2.jpg" alt="" class="img-responsive">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="<?php echo site_url(); ?>home/detail" class="invisible">
-                                    <img src="<?php echo base_url(); ?>public/img/product3.jpg" alt="" class="img-responsive">
-                                </a>
-                                <div class="text">
-                                    <h3>Fur coat</h3>
-                                    <p class="price">$143</p>
-
-                                </div>
-                            </div>
+                    <?php 
+                    }
+                    ?>
+                    
                             <!-- /.product -->
                         </div>
 
