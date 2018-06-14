@@ -56,7 +56,7 @@
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                                <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?> alt="" class="img-responsive">
+                                <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="" class="img-responsive">
                             </div>
 
                             <div class="ribbon sale">
@@ -117,22 +117,7 @@
                     <div class="box" id="details">
                         <p>
                             <h4>Product details</h4>
-                            <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
-                            <h4>Material & care</h4>
-                            <ul>
-                                <li>Polyester</li>
-                                <li>Machine wash</li>
-                            </ul>
-                            <h4>Size & Fit</h4>
-                            <ul>
-                                <li>Regular fit</li>
-                                <li>The model (height 5'8" and chest 33") is wearing a size S</li>
-                            </ul>
-
-                            <blockquote>
-                                <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
-                                </p>
-                            </blockquote>
+                            <?php echo $get_products[0]['description'] ?>
 
                             <hr>
                             <div class="social">

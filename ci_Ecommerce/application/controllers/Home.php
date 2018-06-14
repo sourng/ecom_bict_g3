@@ -34,11 +34,7 @@ class Home extends CI_Controller {
 	}
 		public function detail($id){
 		$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
-		$data['get_relative'] =$this->m_impact->get_by_sql("SELECT * 
-															FROM products													
-															WHERE id<>".$id ."
-															LIMIT 4 "
-														);
+		$data['get_relative'] =$this->m_impact->get_by_sql("SELECT * FROM products WHERE id<>".$id ."LIMIT 4 ");
 		$data['body']= 'index';
 		$this->load->view('front/detail',$data);		
 	}

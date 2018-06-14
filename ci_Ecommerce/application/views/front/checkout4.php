@@ -1,28 +1,18 @@
 <?php $this->load->view('inc/head.php') ?>
-
 <body>
-
-    <!-- *** TOPBAR ***
- _________________________________________________________ -->
+    <!-- *** TOPBAR *** 
+        _________________________________________________________ -->
    <?php $this->load->view('inc/topbar.php') ?>
-
-
     <!-- *** TOP BAR END *** -->
-
     <!-- *** NAVBAR ***
- _________________________________________________________ -->
+     _________________________________________________________ -->
 
     <?php $this->load->view('inc/navbar.php') ?>
-
     <!-- /#navbar -->
-
     <!-- *** NAVBAR END *** -->
-
     <div id="all">
-
         <div id="content">
             <div class="container">
-
                 <div class="col-md-12">
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a>
@@ -30,9 +20,7 @@
                         <li>Checkout - Order review</li>
                     </ul>
                 </div>
-
                 <div class="col-md-9" id="checkout">
-
                     <div class="box">
                         <form method="post" action="<?php echo site_url(); ?>home/checkout4">
                             <h1>Checkout - Order review</h1>
@@ -46,7 +34,6 @@
                                 <li class="active"><a href="#"><i class="fa fa-eye"></i><br>Order Review</a>
                                 </li>
                             </ul>
-
                             <div class="content">
                                 <div class="table-responsive">
                                     <table class="table">
@@ -99,7 +86,6 @@
                                 <!-- /.table-responsive -->
                             </div>
                             <!-- /.content -->
-
                             <div class="box-footer">
                                 <div class="pull-left">
                                     <a href="<?php echo site_url(); ?>home/checkout3" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Payment method</a>
@@ -112,13 +98,9 @@
                         </form>
                     </div>
                     <!-- /.box -->
-
-
                 </div>
                 <!-- /.col-md-9 -->
-
                 <div class="col-md-3">
-
                     <div class="box" id="order-summary">
                         <div class="box-header">
                             <h3>Order summary</h3>
@@ -147,40 +129,26 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
-
                 </div>
                 <!-- /.col-md-3 -->
-
             </div>
             <!-- /.container -->
         </div>
         <!-- /#content -->
-
-
         <!-- *** FOOTER ***
- _________________________________________________________ -->
+         _________________________________________________________ -->
       <?php $this->load->view('inc/footer.php') ?>
-
         <!-- /#footer -->
-
         <!-- *** FOOTER END *** -->
-
         <!-- *** COPYRIGHT ***
  _________________________________________________________ -->
        <?php $this->load->view('inc/copyright.php') ?>
         <!-- *** COPYRIGHT END *** -->
-
     </div>
     <!-- /#all -->
-
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-
     <?php $this->load->view('inc/footer_styl.php') ?>
-
-
 </body>
-
 </html>
