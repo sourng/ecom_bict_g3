@@ -7,18 +7,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                             <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
+                                             <a href="<?php echo site_url(); ?>home/detail<?php echo $row['id'] ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image'] ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                             <a href="<?php echo site_url('home/detail/'.$row['id']); ?>">
+                                             <a href="<?php echo site_url(); ?>home/detail<?php echo $row['id'] ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image'] ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>                                 
-                                <a href="<?php echo site_url('home/detail/'.$row['id']); ?>" class="invisible">
+                                <a href="<?php echo site_url(); ?>home/detail<?php echo $row['id'] ?>" class="invisible">
                                     <img src="<?php echo base_url(); ?>public/img/product3.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
