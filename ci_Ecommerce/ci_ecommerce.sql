@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2018 at 03:55 AM
+-- Generation Time: Jun 13, 2018 at 07:21 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `ci_ecommerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banner`
+--
+
+CREATE TABLE `banner` (
+  `banner_id` int(11) NOT NULL,
+  `banner_name` varchar(250) DEFAULT NULL,
+  `banner_image` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `banner`
+--
+
+INSERT INTO `banner` (`banner_id`, `banner_name`, `banner_image`) VALUES
+(1, NULL, 'main-slider1.jpg'),
+(2, NULL, 'main-slider2.jpg'),
+(3, NULL, 'main-slider3.jpg'),
+(4, NULL, 'main-slider4.jpg');
 
 -- --------------------------------------------------------
 
@@ -52,12 +74,14 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `name`, `status`) VALUES
-(1, 'Sumsung', NULL),
-(2, 'Apple', NULL),
+(1, 'Apple', NULL),
+(2, 'Clothing', NULL),
 (3, 'ASUS', NULL),
 (4, 'Dell', NULL),
-(5, 'Apple', NULL),
-(6, 'ACER', NULL);
+(5, 'VIVO', NULL),
+(6, 'ACER', NULL),
+(7, 'Shoes_man', NULL),
+(8, 'Shoes_woman', NULL);
 
 -- --------------------------------------------------------
 
@@ -109,6 +133,27 @@ CREATE TABLE `customer` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `inspired`
+--
+
+CREATE TABLE `inspired` (
+  `inpired_id` int(11) NOT NULL,
+  `inpired_name` varchar(250) DEFAULT NULL,
+  `inpired_image` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `inspired`
+--
+
+INSERT INTO `inspired` (`inpired_id`, `inpired_name`, `inpired_image`) VALUES
+(1, NULL, 'getinspired1.jpg'),
+(2, NULL, 'getinspired2.jpg'),
+(3, NULL, 'getinspired3.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `order`
 --
 
@@ -131,22 +176,22 @@ CREATE TABLE `order` (
 --
 
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
-  `brands_id` int(11) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  `name` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `description` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `image` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `image2` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image3` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image4` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `feature` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `new` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `price` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `unite` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `qty` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `discount` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
-  `status` varchar(50) CHARACTER SET utf8 DEFAULT NULL
+  `id` int(50) NOT NULL,
+  `brands_id` int(50) DEFAULT NULL,
+  `category_id` int(50) DEFAULT NULL,
+  `name` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `image` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `image2` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image3` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image4` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `feature` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `new` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `price` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `unite` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `qty` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `discount` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(250) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -154,12 +199,22 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `brands_id`, `category_id`, `name`, `description`, `image`, `image2`, `image3`, `image4`, `feature`, `new`, `price`, `unite`, `qty`, `discount`, `status`) VALUES
-(1, 1, 1, 'Galaxy s7', NULL, 'iphone-6s+_2.png', 'iphone-6s+_2.png', 'iphone-6s+_2.png', 'iphone-6s+_2.png', NULL, NULL, '100', NULL, NULL, '10', '1'),
-(2, 2, 2, 'Iphone 6', NULL, 'iphone6s+.png', 'iphone6s+.png', 'iphone6s+.png', 'iphone6s+.png', NULL, NULL, '200', NULL, NULL, '20', '1'),
-(3, 3, 3, 'ASUS', NULL, 'iphone-6s+.png', 'iphone-6s+.png', 'iphone-6s+.png', 'iphone-6s+.png', NULL, NULL, '300', NULL, NULL, '30', '1'),
-(4, 4, 4, 'Experia z', NULL, 'iphone-x.png', 'iphone-x.png', 'iphone-x.png', 'iphone-x.png', NULL, NULL, '400', NULL, NULL, '40', '1'),
-(5, 5, 5, 'Experia z', NULL, 'iphone-7.png', 'iphone-7.png', 'iphone-7_3.png', 'iphone-7_3.png', NULL, NULL, '500', NULL, NULL, '50', '1'),
-(6, 6, 6, 'Experia z', NULL, 'iphone-x.png', 'iphone-x.png', 'iphone-x.png', 'iphone-x.png', NULL, NULL, '100', NULL, NULL, '100', '1');
+(1, 1, 1, 'Galaxy s7', NULL, 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', NULL, NULL, '100', NULL, '8', '10', '1'),
+(2, 2, 1, 'Iphone 6', NULL, 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', '', NULL, '200', NULL, '1', '20', '1'),
+(3, 3, 1, 'ASUS', NULL, 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
+(4, 4, 1, 'Experia z', NULL, 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', NULL, NULL, '400', NULL, '3', '40', '1'),
+(5, 5, 1, 'Experia z', NULL, 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', NULL, NULL, '500', NULL, '8', '50', '1'),
+(6, 6, 1, 'Experia z', NULL, 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', NULL, NULL, '100', NULL, '8', '100', '1'),
+(7, 7, 7, 'Shoes', NULL, 'man/shoes_man2.jpg', 'man/shoes_man3.jpg', 'running_shoes.png', 'running_shoes.png', NULL, NULL, '300', NULL, NULL, '20', NULL),
+(8, 3, 1, 'Shoes', NULL, 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
+(9, NULL, 7, 'Running Shoes', NULL, 'man/shoes_man4.jpg', 'man/shoes_man5.jpg', 'running_shoes.png', 'running_shoes.png', NULL, NULL, '500', NULL, NULL, '20', NULL),
+(10, NULL, 7, 'Shoes Sneaker', NULL, 'man/shoes_man6.jpg', 'man/shoes_man7.jpg', 'shoes-sneaker.png', 'shoes-sneaker.png', NULL, NULL, '600', NULL, NULL, '80', NULL),
+(11, NULL, 7, 'Shoes Transparent', NULL, 'man/shoes_man7.jpg', 'man/shoes_man6.jpg', 'shoes_daoq.png', 'shoes_daoq.png', NULL, NULL, '700', NULL, NULL, '50', NULL),
+(12, NULL, 7, 'Shoes', NULL, 'man/shoes_man.jpg', 'man/shoes_man1.jpg', 'man/shoes_man2.jpg', 'man/shoes_man3.jpg', NULL, NULL, '1000', NULL, NULL, '30', NULL),
+(13, NULL, 2, NULL, NULL, 'man-cloth.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '222', NULL, NULL, '2', NULL),
+(14, NULL, 2, NULL, NULL, 'man-cloth1.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '22', NULL, NULL, '3', NULL),
+(15, NULL, 2, NULL, NULL, 'man-cloth2.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '333', NULL, NULL, '4', NULL),
+(16, NULL, 2, NULL, NULL, 'man-cloth5.jpg', 'man-cloth5.jpg', 'man-cloth5.jpg', NULL, NULL, NULL, '300', NULL, NULL, '2', NULL);
 
 -- --------------------------------------------------------
 
@@ -197,28 +252,6 @@ CREATE TABLE `stock_out` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_banner`
---
-
-CREATE TABLE `tbl_banner` (
-  `banner_id` int(11) NOT NULL,
-  `banner_name` varchar(250) DEFAULT NULL,
-  `banner_image` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_banner`
---
-
-INSERT INTO `tbl_banner` (`banner_id`, `banner_name`, `banner_image`) VALUES
-(1, NULL, 'main-slider1.jpg'),
-(2, NULL, 'main-slider2.jpg'),
-(3, NULL, 'main-slider3.jpg'),
-(4, NULL, 'main-slider4.jpg');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_dow`
 --
 
@@ -246,27 +279,6 @@ CREATE TABLE `tbl_dow` (
 
 INSERT INTO `tbl_dow` (`dow_id`, `title`, `dow_discount`, `dow_img`, `dow_name`, `dow_brand_name`, `dow_price`, `dow_available`, `dow_sold`, `dow_timer`, `dow_old_price`, `dow_best_price`, `dow_hours`, `dow_mins`, `dow_secs`) VALUES
 (1, 'samsung', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_inspired`
---
-
-CREATE TABLE `tbl_inspired` (
-  `inpired_id` int(11) NOT NULL,
-  `inpired_name` varchar(250) DEFAULT NULL,
-  `inpired_image` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_inspired`
---
-
-INSERT INTO `tbl_inspired` (`inpired_id`, `inpired_name`, `inpired_image`) VALUES
-(1, NULL, 'getinspired1.jpg'),
-(2, NULL, 'getinspired2.jpg'),
-(3, NULL, 'getinspired3.jpg');
 
 -- --------------------------------------------------------
 
@@ -311,6 +323,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `banner`
+--
+ALTER TABLE `banner`
+  ADD PRIMARY KEY (`banner_id`);
+
+--
 -- Indexes for table `brands`
 --
 ALTER TABLE `brands`
@@ -333,6 +351,12 @@ ALTER TABLE `company`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`cus-id`);
+
+--
+-- Indexes for table `inspired`
+--
+ALTER TABLE `inspired`
+  ADD PRIMARY KEY (`inpired_id`);
 
 --
 -- Indexes for table `order`
@@ -359,22 +383,10 @@ ALTER TABLE `stock_out`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_banner`
---
-ALTER TABLE `tbl_banner`
-  ADD PRIMARY KEY (`banner_id`);
-
---
 -- Indexes for table `tbl_dow`
 --
 ALTER TABLE `tbl_dow`
   ADD PRIMARY KEY (`dow_id`);
-
---
--- Indexes for table `tbl_inspired`
---
-ALTER TABLE `tbl_inspired`
-  ADD PRIMARY KEY (`inpired_id`);
 
 --
 -- Indexes for table `tbl_login`
@@ -393,6 +405,11 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `banner`
+--
+ALTER TABLE `banner`
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
@@ -401,7 +418,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `company`
 --
@@ -413,6 +430,11 @@ ALTER TABLE `company`
 ALTER TABLE `customer`
   MODIFY `cus-id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `inspired`
+--
+ALTER TABLE `inspired`
+  MODIFY `inpired_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
@@ -421,7 +443,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `stock_in`
 --
@@ -433,20 +455,10 @@ ALTER TABLE `stock_in`
 ALTER TABLE `stock_out`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `tbl_banner`
---
-ALTER TABLE `tbl_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT for table `tbl_dow`
 --
 ALTER TABLE `tbl_dow`
   MODIFY `dow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `tbl_inspired`
---
-ALTER TABLE `tbl_inspired`
-  MODIFY `inpired_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_login`
 --
