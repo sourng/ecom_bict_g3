@@ -78,6 +78,8 @@ $this->load->library('cart');
 		public function basket(){
 
 			$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
+			$data['relate_products'] =$this->m_impact->get_by_sql("SELECT * FROM products
+																			LIMIT 4");
 			$data['body']= 'index';
 
 			$data['cart']  = $this->cart->contents();
