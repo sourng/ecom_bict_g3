@@ -7,12 +7,12 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                             <a href="<?php echo site_url(); ?>home/detail<?php echo $row['id'] ?>">
+                                             <a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'] ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image'] ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                             <a href="<?php echo site_url(); ?>home/detail<?php echo $row['id'] ?>">
+                                             <a href="<?php echo site_url(); ?>home/detail/<?php echo $row['id'] ?>">
                                                 <img src="<?php echo base_url(); ?>public/img/<?php echo $row['image'] ?>" alt="" class="img-responsive">
                                             </a>
                                         </div>
