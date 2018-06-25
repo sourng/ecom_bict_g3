@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2018 at 07:21 PM
+-- Generation Time: Jun 25, 2018 at 03:32 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -180,7 +180,7 @@ CREATE TABLE `products` (
   `brands_id` int(50) DEFAULT NULL,
   `category_id` int(50) DEFAULT NULL,
   `name` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
-  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `description` text CHARACTER SET utf8,
   `image` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
   `image2` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image3` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -199,22 +199,57 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `brands_id`, `category_id`, `name`, `description`, `image`, `image2`, `image3`, `image4`, `feature`, `new`, `price`, `unite`, `qty`, `discount`, `status`) VALUES
-(1, 1, 1, 'Galaxy s7', NULL, 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', NULL, NULL, '100', NULL, '8', '10', '1'),
-(2, 2, 1, 'Iphone 6', NULL, 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', 'phone/iphone6s.jpg', '', NULL, '200', NULL, '1', '20', '1'),
-(3, 3, 1, 'ASUS', NULL, 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
-(4, 4, 1, 'Experia z', NULL, 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', NULL, NULL, '400', NULL, '3', '40', '1'),
-(5, 5, 1, 'Experia z', NULL, 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', 'phone/iphonex.jpg', NULL, NULL, '500', NULL, '8', '50', '1'),
-(6, 6, 1, 'Experia z', NULL, 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', 'phone/iphone6.jpg', NULL, NULL, '100', NULL, '8', '100', '1'),
-(7, 7, 7, 'Shoes', NULL, 'man/shoes_man2.jpg', 'man/shoes_man3.jpg', 'running_shoes.png', 'running_shoes.png', NULL, NULL, '300', NULL, NULL, '20', NULL),
-(8, 3, 1, 'Shoes', NULL, 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', 'phone/iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
-(9, NULL, 7, 'Running Shoes', NULL, 'man/shoes_man4.jpg', 'man/shoes_man5.jpg', 'running_shoes.png', 'running_shoes.png', NULL, NULL, '500', NULL, NULL, '20', NULL),
-(10, NULL, 7, 'Shoes Sneaker', NULL, 'man/shoes_man6.jpg', 'man/shoes_man7.jpg', 'shoes-sneaker.png', 'shoes-sneaker.png', NULL, NULL, '600', NULL, NULL, '80', NULL),
-(11, NULL, 7, 'Shoes Transparent', NULL, 'man/shoes_man7.jpg', 'man/shoes_man6.jpg', 'shoes_daoq.png', 'shoes_daoq.png', NULL, NULL, '700', NULL, NULL, '50', NULL),
-(12, NULL, 7, 'Shoes', NULL, 'man/shoes_man.jpg', 'man/shoes_man1.jpg', 'man/shoes_man2.jpg', 'man/shoes_man3.jpg', NULL, NULL, '1000', NULL, NULL, '30', NULL),
-(13, NULL, 2, NULL, NULL, 'man-cloth.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '222', NULL, NULL, '2', NULL),
-(14, NULL, 2, NULL, NULL, 'man-cloth1.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '22', NULL, NULL, '3', NULL),
-(15, NULL, 2, NULL, NULL, 'man-cloth2.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', NULL, NULL, NULL, '333', NULL, NULL, '4', NULL),
-(16, NULL, 2, NULL, NULL, 'man-cloth5.jpg', 'man-cloth5.jpg', 'man-cloth5.jpg', NULL, NULL, NULL, '300', NULL, NULL, '2', NULL);
+(1, 1, 1, 'Galaxy s7', '<p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>', 'iphone6.jpg', 'iphone7.jpg', 'iphone6.jpg', 'iphone7.jpg', NULL, NULL, '100', NULL, '8', '10', '1'),
+(2, 6, 1, 'Experia z', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphone6.jpg', 'iphone7.jpg', 'iphone6.jpg', 'iphone7.jpg', NULL, NULL, '100', NULL, '8', '100', '1'),
+(3, NULL, 7, 'Shoes', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'shoes_man.jpg', 'shoes_man1.jpg', 'shoes_man2.jpg', 'shoes_man1.jpg', NULL, NULL, '1000', NULL, NULL, '30', NULL),
+(4, 2, 1, 'Iphone 6', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphone6.jpg', 'iphone6.jpg', 'iphone7.jpg', 'iphone7.jpg', '', NULL, '200', NULL, '1', '20', '1'),
+(5, NULL, 2, NULL, 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'man-cloth.jpg', 'man-cloth.jpg', 'man-cloth.jpg', 'man-cloth.jpg', NULL, NULL, '22', NULL, NULL, '3', NULL),
+(6, NULL, 2, NULL, 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'man-cloth.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', 'man-cloth3.jpg', NULL, NULL, '222', NULL, NULL, '2', NULL),
+(7, 7, 7, 'Shoes', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'shoes_man2.jpg', 'shoes_man2.jpg', 'shoes_man2.jpg', 'shoes_man2.jpg', NULL, NULL, '300', NULL, NULL, '20', NULL),
+(8, NULL, 2, NULL, 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'man-cloth5.jpg', 'man-cloth5.jpg', 'man-cloth5.jpg', 'man-cloth3.jpg', NULL, NULL, '300', NULL, NULL, '2', NULL),
+(9, 3, 1, 'Shoes', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphone7.jpg', 'iphonex.jpg', 'iphone7.jpg', 'iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
+(10, 3, 1, 'ASUS', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphone7.jpg', 'iphonex.jpg', 'iphone7.jpg', 'iphone7.jpg', NULL, NULL, '300', NULL, '8', '30', '1'),
+(11, NULL, 2, NULL, 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'man-cloth2.jpg', 'man-cloth3.jpg', 'man-cloth4.jpg', 'man-cloth3.jpg', NULL, NULL, '333', NULL, NULL, '4', NULL),
+(12, 4, 1, 'Experia z', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphonex.jpg', 'iphone7.jpg', 'iphone7.jpg', 'iphonex.jpg', NULL, NULL, '400', NULL, '3', '40', '1'),
+(13, NULL, 7, 'Running Shoes', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'shoes_man4.jpg', 'shoes_man5.jpg', 'shoes_man4.jpg', 'shoes_man4.jpg', NULL, NULL, '500', NULL, NULL, '20', NULL),
+(14, 5, 1, 'Experia z', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphonex.jpg', 'iphone7.jpg', 'iphone7.jpg', 'iphone7.jpg', NULL, NULL, '500', NULL, '8', '50', '1'),
+(15, NULL, 7, 'Shoes Sneaker', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'shoes_man6.jpg', 'shoes_man7.jpg', 'shoes_man6.jpg', 'shoes_man6.jpg', NULL, NULL, '600', NULL, NULL, '80', NULL),
+(16, NULL, 7, 'Shoes Transparent', 'White lace top, woven, has a round neck, short sleeves, has knitted lining attached', 'iphone7.jpg', 'iphonex.jpg', 'iphone7.jpg', 'iphonex.jpg', NULL, NULL, '700', NULL, NULL, '50', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_cart`
+--
+
+CREATE TABLE `product_cart` (
+  `product_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `product_name` varchar(250) NOT NULL,
+  `product_price` varchar(30) NOT NULL,
+  `product_image` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product_cart`
+--
+
+INSERT INTO `product_cart` (`product_id`, `category_id`, `product_name`, `product_price`, `product_image`) VALUES
+(1, 1, 'ASUS Laptop 1500', '799.00', 'phone/iphonex.jpg'),
+(2, 1, 'Microsoft Surface Pro 3', '898.00', 'phone/iphonex.jpg'),
+(3, 1, 'Samsung EVO 32GB', '12.00', 'phone/iphonex.jpg'),
+(4, 1, 'Desktop Hard Drive', '50.00', 'phone/iphonex.jpg'),
+(5, 1, 'External Hard Drive', '80.00', 'phone/iphonex.jpg'),
+(6, 2, 'Crock-Pot Oval Slow Cooker', '34.00', 'phone/iphonex.jpg'),
+(7, 2, 'Magic Blender System', '80.00', 'phone/iphonex.jpg'),
+(8, 2, 'Cordless Hand Vacuum', '40.00', 'phone/iphonex.jpg'),
+(9, 2, 'Dishwasher Detergent', '15.00', 'phone/iphonex.jpg'),
+(10, 2, 'Essential Oil Diffuser', '20.00', 'phone/iphonex.jpg'),
+(11, 3, 'Medical Personalized', '11.00', 'phone/iphonex.jpg'),
+(12, 3, 'Best Bridle Leather Belt', '64.00', 'phone/iphonex.jpg'),
+(13, 3, 'HANDMADE Bow set', '24.00', 'phone/iphonex.jpg'),
+(14, 3, 'Ceramic Coffee Mug', '18.00', 'phone/iphonex.jpg'),
+(15, 3, 'Wine Birthday Glass', '18.00', 'phone/iphonex.jpg');
 
 -- --------------------------------------------------------
 
@@ -297,10 +332,10 @@ CREATE TABLE `tbl_login` (
 --
 
 INSERT INTO `tbl_login` (`id`, `user_name`, `password`) VALUES
-(1, NULL, NULL),
+(1, 'thoninjc', 'jc1234'),
 (2, 'sasa', '123'),
 (3, 'ssasa', '123'),
-(4, 'q', 'q');
+(4, 'sian', '123');
 
 -- --------------------------------------------------------
 
@@ -369,6 +404,12 @@ ALTER TABLE `order`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product_cart`
+--
+ALTER TABLE `product_cart`
+  ADD PRIMARY KEY (`product_id`);
 
 --
 -- Indexes for table `stock_in`
@@ -444,6 +485,11 @@ ALTER TABLE `order`
 --
 ALTER TABLE `products`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `product_cart`
+--
+ALTER TABLE `product_cart`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `stock_in`
 --
