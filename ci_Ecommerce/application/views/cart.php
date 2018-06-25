@@ -100,7 +100,7 @@ return false; // cancel button
 		<?php echo form_close(); ?>
 
 		<!-- "Place order button" on click send "billing" controller -->
-		<input class ='fg-button teal' type="button" value="Place Order" onclick="window.location = 'shopping/billing_view'"></td>
+		<input class ='fg-button teal' type="button" value="Place Order" onclick="window.location = 'billing_view'"></td>
 		</tr>
 		<?php endif; ?>
 		</table>
