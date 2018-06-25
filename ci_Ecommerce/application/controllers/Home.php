@@ -10,6 +10,7 @@ class Home extends CI_Controller {
         $this->load->helper('form');
  
         $this->load->helper('url');
+$this->load->library('cart');
 		
 		$this->load->model('m_impact', '', true);
 
@@ -33,6 +34,7 @@ class Home extends CI_Controller {
 		$this->load->view('front/category',$data);
 	}
 			public function detail($id){
+
 		$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
 		$data['get_relative'] =$this->m_impact->get_by_sql("SELECT * FROM products WHERE id<>".$id ."	LIMIT 4 " 	);
 		$data['body']= 'index';
@@ -77,6 +79,8 @@ class Home extends CI_Controller {
 
 			$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products");
 			$data['body']= 'index';
+
+			$data['cart']  = $this->cart->contents();
 
 			$this->load->view('front/basket',$data);
 

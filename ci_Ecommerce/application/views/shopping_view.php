@@ -46,6 +46,10 @@ return false; // cancel button
 		$<?php echo $price; ?></big></div>
 		<?php
 
+
+
+		
+
 		// Create form and send values in 'shopping/add' function.
 		echo form_open('shopping/add');
 		echo form_hidden('id', $id);

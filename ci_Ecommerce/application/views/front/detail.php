@@ -1,4 +1,7 @@
-    <?php $this->load->view('inc/head.php') ?>
+    <?php 
+    $this->load->view('inc/head.php') ?>
+
+
     <body>
     <!-- *** TOPBAR ***
  _________________________________________________________ -->
@@ -56,7 +59,13 @@
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                                <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="" class="img-responsive">
+                               
+
+                                
+
+
+                                <img style="width: 100%;" class="image<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['image'] ?>" src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="<?php echo $get_products[0]['id'] ?>">
+
                             </div>
 
                             <div class="ribbon sale">
@@ -74,13 +83,43 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="box">
-                                <h1 class="text-center"><?php echo $get_products[0]['name']; ?></h1>
+
+
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tile">
+                
+                  
+
+                  <span class="tile-overlay"></span>
+                <div class="footer">
+                 
+
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+                                
+
+                                 <h2 class="name<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['id'] ?>"><?php echo $get_products[0]['name'] ?></h2>
+
                                 <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
                                 </p>
-                                <p class="price"><?php echo $get_products[0]['price']; ?></p>
+                                <h2 class="price-label price<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>">USD <?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>
+                    
+
+                   
+                                </h2>
 
                                 <p class="text-center buttons">
-                                    <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
+                                    
+                                    <button class="btn btn-primary" onclick="javascript:addtocart(<?php echo $get_products[0]['id'] ?>)"><i class="fa fa-heart"></i> Add to Cart</button>
+
                                     <a href="basket.html" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
                                 </p>
 
@@ -90,8 +129,8 @@
                             <div class="row" id="thumbs">
                                 
                                 <div class="col-xs-4">
-                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ;?>" class="thumb">
-                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="" class="img-responsive">
+                                    <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image']; ?>" class="thumb">
+                                        <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image2'] ?>" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-4">
@@ -200,7 +239,34 @@
 
 
 
-
+<script type="text/javascript">
+    function addtocart(p_id)
+    {
+        var price = $('.price'+p_id).attr('rel');
+        var image = $('.image'+p_id).attr('rel');
+        var name  = $('.name'+p_id).text();
+        var id    = $('.name'+p_id).attr('rel');
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo site_url('my_cart/add');?>",
+                    data: "id="+id+"&image="+image+"&name="+name+"&price="+price,
+                    success: function (response) {
+                       $(".cartcount").text(response);
+                    }
+                });
+    }
+  function opencart()
+  {
+      $.ajax({
+                  type: "POST",
+                  url: "<?php echo site_url('my_cart/opencart');?>",
+                  data: "",
+                  success: function (response) {
+                  $(".displaycontent").html(response);
+                  }
+              });
+  }
+</script>
 
 </body>
 

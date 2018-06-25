@@ -16,7 +16,10 @@
                         <i class="fa fa-search"></i>
                     </button>
                     <a class="btn btn-default navbar-toggle" href="basket.html">
-                        <i class="fa fa-shopping-cart"></i><span class="hidden-xs">3 items in cart</span>
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>
+      Cart ( <span class="hidden-xs cartcount"><?php echo count($this->cart->contents());  ?> Items in Cart</span> )
+    </span>                       
                     </a>
                 </div>
             </div>
@@ -123,7 +126,9 @@
 
             <div class="navbar-buttons">
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                    <a href="<?php echo site_url(); ?>home/basket" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>
+      Cart ( <span class="cartcount"><?php echo count($this->cart->contents());  ?></span> )
+    </span> Items</a>
                 </div>
                 <!--/.nav-collapse -->
 
