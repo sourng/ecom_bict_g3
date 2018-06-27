@@ -85,19 +85,19 @@
                             <div class="box">
 
 
-             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="tile">
-                
-                  
+                             <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="tile">
+                                
+                                  
 
-                  <span class="tile-overlay"></span>
-                <div class="footer">
-                 
+                                  <span class="tile-overlay"></span>
+                                <div class="footer">
+                                 
 
-                  
-                </div>
-              </div>
-            </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
 
 
 
