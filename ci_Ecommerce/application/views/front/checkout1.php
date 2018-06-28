@@ -34,7 +34,7 @@
                 <div class="col-md-9" id="checkout">
 
                     <div class="box">
-                        <form method="post" action="<?php echo base_url();?>home/checkout2">
+                        <form method="post" action="<?php echo base_url();?>my_cart/save_order">
                             <h1>Checkout</h1>
                             <ul class="nav nav-pills nav-justified">
                                 <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br>Address</a>
@@ -52,7 +52,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="firstname">Firstname</label>
-                                            <input type="text" class="form-control" id="firstname">
+                                            <input type="text" name="f_name" required="" class="form-control" id="firstname">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
