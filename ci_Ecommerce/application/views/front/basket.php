@@ -52,54 +52,6 @@
                                     </thead>
                                     <tbody>
 
-<<<<<<< HEAD
-                        <?php 
-                            if(isset($cart) && is_array($cart) && count($cart)){
-                                $i=1;
-                            foreach ($cart as $data) { 
-                                // $cart as $item
-                        ?>
-
-                            <tr class="item first rowid<?php echo $data['rowid'] ?>">
-                              <td class="thumb">
-                                 <img style="height: 34px;" src="<?php echo base_url(); ?>public/img/" alt="<?php echo $data['id'];?>">
-                              </td>
-                              <td style="width: 350px;" class="name"><?php echo $data['name']; ?></td>                  
-                              <td class="qnt-count" width="60">
-                                <input onchange="javascript:updateproduct('<?php echo $data['rowid'] ?>')" class="quantity qty<?php echo $data['rowid'] ?> form-control" type="number" min="1" value="<?php echo $data['qty'] ?>">                    
-                              </td>
-                              <td><span class="Update btn btn-info" onclick="javascript:updateproduct('<?php echo $data['rowid'] ?>')">Update</span></td>
-                              <td  class="price">$ <span class="price<?php echo $data['rowid'] ?>"><?php echo $data['price'] ?></span></td>
-                                <!-- <td>$0.00</td> -->
-                              <td style="width: 120px;" class="total">$ <span class="subtotal subtotal<?php echo $data['rowid'] ?>"><?php echo $data['subtotal'] ?></span></td>
-                              <td class="delete"><i class="icon-delete btn btn-danger" onclick="javascript:deleteproduct('<?php echo $data['rowid'] ?>')"><i class="fa fa-trash-o"></i></i></td>
-                            </tr>
-
-                        <?php
-                          $i++;
-                            } }
-                        ?>
-
-
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th colspan="5">Total</th>
-                            <th colspan="2">$
-                            <span class="grandtotal">  
-                            <?php
-                            $grand_total = 0;
-                            // Calculate grand total.
-                            if ($cart = $this->cart->contents()):
-                            foreach ($cart as $data):
-                            $grand_total = $grand_total + $data['subtotal'];
-                            endforeach;
-                            endif;
-                            echo $grand_total;
-                            ?> 
-                        </span>
-                        </th>
-=======
                                       <?php 
                   if(isset($cart) && is_array($cart) && count($cart)){
                   $i=1;
@@ -150,7 +102,6 @@
                                                     endif;
                                                     echo $grand_total;
                                                 ?> </span></th>
->>>>>>> c2c0d21751f76172a09b9fd9447506b587efa1bf
                                         </tr>
                                     </tfoot>
                                 </table>
