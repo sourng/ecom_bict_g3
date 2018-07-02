@@ -1,3 +1,13 @@
+<!-- <?php
+$grand_total = 0;
+// Calculate grand total.
+if ($cart = $this->cart->contents()):
+foreach ($cart as $item):
+$grand_total = $grand_total + $item['subtotal'];
+endforeach;
+endif;
+?> -->
+
 <?php $this->load->view('inc/head.php') ?>
 
 <body>
@@ -27,89 +37,79 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a>
                         </li>
-                        <li>Checkout - Payment method</li>
+                        <li>Checkout - Address</li>
                     </ul>
                 </div>
 
                 <div class="col-md-9" id="checkout">
 
                     <div class="box">
-                        <form method="post" action="<?php echo base_url();?>home/checkout4">
-                            <input type="hidden" name="f_name" value="<?php echo @$_POST['f_name'] ?>">
-                            <input type="hidden" name="l_name" value="<?php echo @$_POST['l_name'] ?>">
-                            <input type="hidden" name="name" value="<?php echo @$_POST['name'] ?>">
-                            <input type="hidden" name="phone" value="<?php echo @$_POST['phone'] ?>">
-                            <input type="hidden" name="email" value="<?php echo @$_POST['email'] ?>">
+
+                        
 
 
-                            
-                            <h1>Checkout - Payment method</h1>
+                        <!-- <form method="post" action="<?php echo base_url();?>home/checkout2"> -->
+                        <form method="post" action="<?php echo site_url(); ?>home/login_validation"> 
+
+                            <h1>LOG IN</h1>
                             <ul class="nav nav-pills nav-justified">
-                                <li><a href="<?php echo base_url();?>home/checkout1"><i class="fa fa-map-marker"></i><br>Address</a>
+                                <li class="active"><a href="#"><i class="fa fa-map-marker"></i><br>Address</a>
                                 </li>
-                                <li><a href="<?php echo base_url();?>home/checkout2"><i class="fa fa-truck"></i><br>Delivery Method</a>
+                                <li class="disabled"><a href="#"><i class="fa fa-truck"></i><br>Delivery Method</a>
                                 </li>
-                                <li class="active"><a href="#"><i class="fa fa-money"></i><br>Payment Method</a>
+                                <li class="disabled"><a href="#"><i class="fa fa-money"></i><br>Payment Method</a>
                                 </li>
-                                <li class="disabled"><a href="<?php echo base_url();?>home/checkout4"><i class="fa fa-eye"></i><br>Order Review</a>
+                                <li class="disabled"><a href="#"><i class="fa fa-eye"></i><br>Order Review</a>
                                 </li>
                             </ul>
 
                             <div class="content">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <div class="box payment-method">
-
-                                            <h4>Paypal</h4>
-
-                                            <p>We like it all.</p>
-
-                                            <div class="box-footer text-center">
-
-                                                <input type="radio" name="payment" value="payment1">
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="firstname">User Name</label>
+                                            <!-- <input type="text" name="user" required="" class="form-control" id="firstname"​​ placeholder="User Name or Email"> -->
+                                            
+                                            <input type="text" name="username" class="form-control" placeholder="User Name or Email" />  
+                     <span class="text-danger"><?php echo form_error('username'); ?></span>
+                                            
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="box payment-method">
+                                        <div class="form-group">
+                                            <!-- <label for="lastname">Pass Word</label>
+                                            <input type="Password" name="l_name" required="" class="form-control" id="lastname"placeholder="Password">-->
+ 
 
-                                            <h4>Payment gateway</h4>
+                                            <label>Enter Password</label>  
+                     <input type="password" name="password" class="form-control" placeholder="Enter Password" />  
+                     <span class="text-danger"><?php echo form_error('password'); ?></span>  
 
-                                            <p>VISA and Mastercard only.</p>
 
-                                            <div class="box-footer text-center">
-
-                                                <input type="radio" name="payment" value="payment2">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <div class="box payment-method">
-
-                                            <h4>Cash on delivery</h4>
-
-                                            <p>You pay when you get it.</p>
-
-                                            <div class="box-footer text-center">
-
-                                                <input type="radio" name="payment" value="payment3">
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /.row -->
 
+                                
                             </div>
-                            <!-- /.content -->
+                            <?php  
+                        echo '<label class="text-danger">'.$this->session->flashdata("error").'</label>';  
+                     ?>  
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="<?php echo site_url(); ?>home/basket" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Shipping method</a>
+                                    <a href="<?php echo base_url();?>home/basket" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to basket</a>
                                 </div>
                                 <div class="pull-right">
-                                    <button type="submit" class="btn btn-primary">Continue to Order review<i class="fa fa-chevron-right"></i>
+                                    
+                                        
+                                    <button type="submit" class="btn btn-outline-primary">
+                                    <a href="<?php echo base_url();?>home/checkout1"> Register <i class="fa fa-chevron-right"></i> </a>
                                     </button>
+                                    
+                                    <input type="submit" name="insert" value="Login" class="btn btn-info fa fa-chevron-right"/>
+                     
                                 </div>
                             </div>
                         </form>
@@ -179,9 +179,9 @@
         </div>
         <!-- /#content -->
 
-
         <!-- *** FOOTER ***
  _________________________________________________________ -->
+     
         <?php $this->load->view('inc/footer.php') ?>
 
         <!-- /#footer -->
