@@ -63,7 +63,7 @@
 
                             <tr class="item first rowid<?php echo $data['rowid'] ?>">
                               <td class="thumb">
-                                 <img style="height: 34px;" src="<?php echo base_url(); ?>public/img/<?php echo $data['image']; ?>" alt="<?php echo $data['id'];?>">
+                                 <img style="height: 34px;" src="<?php echo base_url(); ?>public/img/" alt="<?php echo $data['id'];?>">
                               </td>
                               <td style="width: 350px;" class="name"><?php echo $data['name']; ?></td>                  
                               <td class="qnt-count" width="60">
