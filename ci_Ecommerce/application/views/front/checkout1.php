@@ -52,7 +52,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="firstname">Firstname</label>
-                                            <input type="text" class="form-control" id="firstname">
+                                            <input type="text" name="name" class="form-control" id="firstname">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">

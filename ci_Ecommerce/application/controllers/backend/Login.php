@@ -158,15 +158,9 @@ class Login extends CI_Controller {
 
         if (sizeof($result) > 0) {
 
-
-
             $salt = $result[0]['salt'];
-
             $encrypted_password = $result[0]['encrypted_password'];
-
             $hash_password = $this->m_user->checkhashSSHA($salt, $password);
-
-
 
             /*print_r($encrypted_password);
 
@@ -193,45 +187,24 @@ class Login extends CI_Controller {
                     $newdata = array(
 
                         'gro_id'=> $result[0]['gro_id'],
-
                         'group_name'=> $result[0]['group_name'],
-
                         'group_level'		=> $result[0]['level'],
-
                         'uid' 			=> $result[0]['uid'],
-
                         'name' 			=> $result[0]['name'],
-
                         'email'     		=> $result[0]['email'],
-
                         'logged_in' 		=> TRUE
 
                     );
 
                     $this->session->set_userdata($newdata);
 
-
-
                     //redirect(site_url().'admin/main', 'location', 302);
-
                     //  redirect(site_url().'admin/Dashboard', 'location', 302);
-
-
-
                     include_once 'login_option.php';
-
-
-
-
-
                 }else{
-
                     //message
-
                     $this->session->set_userdata('message', $this->connect->message("Invalid password!", "error"));
-
                     $this->index();
-
                 }
 
             }else{
@@ -245,28 +218,16 @@ class Login extends CI_Controller {
                 $newdata = array(
 
                     'gro_id'			=> $result[0]['gro_id'],
-
                     'group_name'        => $result[0]['group_name'],
-
                     'group_level'		=> $result[0]['level'],
-
                     'uid' 				=> $result[0]['uid'],
-
                     'name' 				=> $result[0]['name'],
-
                     'email'     		=> $result[0]['email'],
-
                     'logged_in' 		=> TRUE
-
                 );
 
                 $this->session->set_userdata($newdata);
-
-
-
-                redirect(site_url().'backend/main', 'location', 302);
-
-
+                redirect(site_url().'backend/dashboard', 'location', 302);
 
             } /// end check is_encrypt
 

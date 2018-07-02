@@ -1,24 +1,8 @@
 <?php
 
-/**
-
- * Created by PhpStorm.
-
- * User: SENG Sourng
-
- * Date: 1/20/2017
-
- * Time: 9:07 PM
-
- */
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
-
 class Dashboard extends CI_Controller {
-
-
 
     public function index()
 

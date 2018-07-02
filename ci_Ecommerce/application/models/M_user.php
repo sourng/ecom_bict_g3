@@ -12,13 +12,13 @@ class M_user extends CI_Model {
 
     }
 
-    function login($email, $option = false)
+    function login($email, $pass, $option = false)
 
     {
 
         $query	= $this->db->query('SELECT users.*, user_groups.level,user_groups.group_name FROM users LEFT JOIN user_groups
 
-											   ON users.gro_id = user_groups.id_group  WHERE users.status = 1 AND email = '."'".$email."'");
+											   ON users.gro_id = user_groups.id_group  WHERE users.status = 1 AND email = '."'".$email."' AND password='". $pass ."'");
 
 
 
