@@ -1,6 +1,6 @@
+   
     <?php 
     $this->load->view('inc/head.php') ?>
-
 
     <body>
     <!-- *** TOPBAR ***
@@ -41,7 +41,6 @@
 
                    <?php $this ->load->view('inc/category_left.php') ?>
 
-
                    <?php $this->load->view('inc/brand.php') ?>
 
                   <?php $this->load->view('inc/color.php') ?>
@@ -49,7 +48,7 @@
 
                     <div class="banner">
                         <a href="#">
-                            <img src="<?php echo base_url(); ?>public/img/banner.jpg" alt="sales 2014" class="img-responsive">
+                            <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="sales 2014" class="img-responsive">
                         </a>
                     </div>
                 </div>
@@ -59,15 +58,8 @@
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                               
-
-                                
-
-
                                 <img style="width: 100%;" class="image<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['image'] ?>" src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image'] ?>" alt="<?php echo $get_products[0]['id'] ?>">
-
                             </div>
-
                             <div class="ribbon sale">
                                 <div class="theribbon">SALE</div>
                                 <div class="ribbon-background"></div>
@@ -87,47 +79,32 @@
 
                              <div class="col-lg-3 col-md-4 col-sm-6">
                                 <div class="tile">
-                                
-                                  
-
                                   <span class="tile-overlay"></span>
                                 <div class="footer">
-                                 
 
-                                  
                                 </div>
                               </div>
                             </div>
 
-
-
-
-
-
-                                
-
-                                 <h2 class="name<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['id'] ?>"><?php echo $get_products[0]['name'] ?></h2>
-
-                                <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material & care and sizing</a>
+                                 <h2 class="name<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['id'] ?>"><?php echo $get_products[0]['name'] ?>
+                                 </h2>
+                                <p class="goToDescription"><a href="#details" class="scroll-to">
+                                    Scroll to product details, material & care and sizing</a>
                                 </p>
-                                <h2 class="price-label price<?php echo $get_products[0]['id'] ?>" rel="<?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>">USD <?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>
-                    
-
-                   
+                                <h2 class="price-label price<?php echo $get_products[0]['id'] ?>"rel="<?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>">USD <?php echo $get_products[0]['price']-($get_products[0]['price']*$get_products[0]['discount']/100); ?>
                                 </h2>
 
                                 <p class="text-center buttons">
-                                    
-                                    <button class="btn btn-primary" onclick="javascript:addtocart(<?php echo $get_products[0]['id'] ?>)"><i class="fa fa-heart"></i> Add to Cart</button>
+
+                                    <button class="btn btn-primary" onclick="javascript:addtocart(<?php echo $get_products[0]['id'] ?>)"><i class="fa fa-heart">
+                                     </i> Add to Cart
+                                    </button>
 
                                     <a href="basket.html" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
                                 </p>
 
-
                             </div>
-                        
                             <div class="row" id="thumbs">
-                                
                                 <div class="col-xs-4">
                                     <a href="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image']; ?>" class="thumb">
                                         <img src="<?php echo base_url(); ?>public/img/<?php echo $get_products[0]['image2'] ?>" alt="" class="img-responsive">
@@ -174,7 +151,7 @@
                 
                     <div class="row same-height-row">
                         <?php 
-                            foreach ($get_relative as $row) {
+                            foreach ($getOtherPro as $row) {
                         ?>  
                         <div class="col-md-3 col-sm-6">
                             <div class="product same-height">
@@ -239,34 +216,34 @@
 
 
 
-<script type="text/javascript">
-    function addtocart(p_id)
-    {
-        var price = $('.price'+p_id).attr('rel');
-        var image = $('.image'+p_id).attr('rel');
-        var name  = $('.name'+p_id).text();
-        var id    = $('.name'+p_id).attr('rel');
-            $.ajax({
-                    type: "POST",
-                    url: "<?php echo site_url('my_cart/add');?>",
-                    data: "id="+id+"&image="+image+"&name="+name+"&price="+price,
-                    success: function (response) {
-                       $(".cartcount").text(response);
-                    }
-                });
-    }
-  function opencart()
-  {
-      $.ajax({
-                  type: "POST",
-                  url: "<?php echo site_url('my_cart/opencart');?>",
-                  data: "",
-                  success: function (response) {
-                  $(".displaycontent").html(response);
-                  }
-              });
-  }
-</script>
+    <script type="text/javascript">
+        function addtocart(p_id)
+        {
+            var price = $('.price'+p_id).attr('rel');
+            var image = $('.image'+p_id).attr('rel');
+            var name  = $('.name'+p_id).text();
+            var id    = $('.name'+p_id).attr('rel');
+                $.ajax({
+                        type: "POST",
+                        url: "<?php echo site_url('my_cart/add');?>",
+                        data: "id="+id+"&image="+image+"&name="+name+"&price="+price,
+                        success: function (response) {
+                           $(".cartcount").text(response);
+                        }
+                    });
+        }
+      function opencart()
+      {
+          $.ajax({
+                      type: "POST",
+                      url: "<?php echo site_url('my_cart/opencart');?>",
+                      data: "",
+                      success: function (response) {
+                      $(".displaycontent").html(response);
+                      }
+                  });
+      }
+    </script>
 
 </body>
 

@@ -98,12 +98,7 @@ class My_cart extends CI_Controller {
 	endif;
 	$this->cart->destroy();
 	// After storing all imformation in database load "billing_success".
-<<<<<<< HEAD
-	$this->load->view('front/checkout4');
-=======
-	//$this->load->view('front/checkout');
-	$this->load->view('front/checkout2');
->>>>>>> ecd07823d3ed733e2800a7d3b1a2b5fd5f4b6da1
+	$this->load->view('checkout2');
 	}
 	public function opencart()
     {
