@@ -103,6 +103,9 @@ $this->load->library('cart');
 
 			$this->load->view('front/checkout1');
 		}
+
+
+		
 			public function checkout2(){
 
 			$this->load->view('front/checkout2');
