@@ -1,4 +1,4 @@
-﻿    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
         <div class="container">
             <div class="navbar-header">
 
@@ -16,10 +16,11 @@
                         <i class="fa fa-search"></i>
                     </button>
                     <a class="btn btn-default navbar-toggle" href="basket.html">
+                        
                         <i class="fa fa-shopping-cart"></i>
                         <span>
-      Cart ( <span class="hidden-xs cartcount"><?php echo count($this->cart->contents());  ?> Items in Cart</span> )
-    </span>                       
+                          Cart ( <span class="hidden-xs cartcount"><?php echo count($this->cart->contents());  ?> Items in Cart</span> )
+                        </span>                       
                     </a>
                 </div>
             </div>
@@ -39,31 +40,10 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-    											 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
+                                                 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a> </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Featured</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                                 <!-- /.yamm-content -->
@@ -83,39 +63,16 @@
                                                 <li><a href="<?php echo site_url(); ?>home/category">T-shirts</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="<?php echo site_url(); ?>home/category">Trainers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="<?php echo base_url(); ?>public/img/banner.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="<?php echo base_url(); ?>public/img/banner2.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
+                    </li>
+
+                    <li class="dropdown yamm-fw">
+                        <li><a href="<?php echo site_url(); ?>home/category">Category
+                        </a>
                     </li>
 
                         
@@ -144,9 +101,9 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search">
                         <span class="input-group-btn">
-			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
 
-		    </span>
+            </span>
                     </div>
                 </form>
 

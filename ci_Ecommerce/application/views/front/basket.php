@@ -50,7 +50,7 @@
                                             <th style="width: 180px;" colspan="2">Total</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="for-clear">
 
                                       <?php 
                   if(isset($cart) && is_array($cart) && count($cart)){
@@ -145,7 +145,12 @@
                                         $('.subtotal').each(function(){
                                             total += parseInt($(this).text());
                                             $('.grandtotal').text(total);
-                                        });              
+                                        }); 
+                                        if (rowid == 'all') {
+                                            $('#for-clear').html('') ;
+                                             $('.grandtotal').text('0.00');  
+                                        }
+
                                     }
                                 });
                           }

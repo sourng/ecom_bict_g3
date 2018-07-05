@@ -16,6 +16,14 @@ class Home extends CI_Controller {
 
 		// Load session library
 		$this->load->library('session');
+
+		 //load pagination library
+        $this->load->library('pagination');
+        //load post model
+        $this->load->model('M_pagination');
+        //per page limit
+         $this->perPage = 10;
+
     }    
 	public function index(){
 		// $wheres = array('rate' => 1 );
@@ -25,14 +33,86 @@ class Home extends CI_Controller {
         $data['body']= 'index';
         $this->load->view('front/index',$data);      
 	}	
+
 	public function category(){
-		 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id");
-		// $data['get_products'] = $this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
+
+		$data = array();
+        
+        //get rows count
+        $conditions['returnType'] = 'count';
+        $totalRec = $this->M_pagination->getRows($conditions);
+        
+        //pagination configs
+        $config['base_url']    = base_url().'front/category/';
+        $config['uri_segment'] = 3;
+        $config['total_rows']  = $totalRec;
+        $config['per_page']    = $this->perPage;
+        
+        //styling
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="javascript:void(0);">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['next_link'] = 'Next';
+        $config['prev_link'] = 'Prev';
+        $config['next_tag_open'] = '<li class="pg-next">';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open'] = '<li class="pg-prev">';
+        $config['prev_tag_close'] = '</li>';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+        
+        //initialize pagination library
+        $this->pagination->initialize($config);
+        
+        //define offset
+        $page = $this->uri->segment(3);
+        $offset = !$page?0:$page;
+        
+        //get rows
+        $conditions['returnType'] = '';
+        $conditions['start'] = $offset;
+        $conditions['limit'] = $this->perPage;
+
+        // End Pagination
+
+
+		  $data['getcategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id");
+		$data['getMaincategory'] = $this->m_impact->get_by_sql("SELECT scat.*, c.* FROM sub_category AS scat JOIN category AS c ON scat.category_id= c.category_id ");
+		$data['getSubcategory'] = $this->m_impact->get_by_sql("SELECT scat.*, c.* FROM sub_category AS scat JOIN category AS c ON scat.category_id= c.category_id");
 
 		$data['body']= 'index';
 		$this->load->view('front/category',$data);
 	}
+
+
+
+
+	public function categoryfind($id=false){
+		$data['getOtherPro'] =$this->m_impact->get_by_sql("SELECT * FROM products WHERE id<>".$id);
+		
+		 	 $data['getcategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id where sub_id=".$id);		
+
+		 $data['getMaincategory'] = $this->m_impact->get_by_sql("SELECT * FROM category ");
+
+		$data['getSubcategory'] = $this->m_impact->get_by_sql("SELECT scat.*, c.* FROM sub_category AS scat JOIN category AS c ON scat.category_id= c.category_id");
+		
+		 // $data['getcategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* FROM category AS c JOIN products AS p ON c.category_id=p.category_id where sub_id=1");
+		$data['get_products'] = $this->m_impact->get_by_sql("SELECT * FROM products where sub_id=".$id);
+
+		$data['body']= 'index';
+		$this->load->view('front/category',$data);
+	}
+
 		public function detail($id){
+
+			$data['getMaincategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* ,s_c.* FROM category AS c JOIN products AS p INNER JOIN sub_category AS s_c ON c.category_id=p.category_id=s_c.category_id = s_c.category_id");
+
+		$data['getSubcategory'] = $this->m_impact->get_by_sql("SELECT c.* ,s_c.* FROM category AS c JOIN sub_category AS s_c ON c.category_id=s_c.category_id");
+		
+
 		$data['get_products'] =$this->m_impact->get_by_sql("SELECT * FROM products where id=".$id);
 		
 		$data['getOtherPro'] =$this->m_impact->get_by_sql("SELECT * FROM products WHERE id<>".$id);
