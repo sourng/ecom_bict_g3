@@ -1,14 +1,11 @@
 <?php
-
 class crud
 {
-	private $db;
-	
+	private $db;	
 	function __construct($DB_con)
 	{
 		$this->db = $DB_con;
-	}
-	
+	}	
 	public function create($first_name,$last_name,$email_id,$contact_no)
 	{
 		try
@@ -25,10 +22,8 @@ class crud
 		{
 			echo $e->getMessage();	
 			return false;
-		}
-		
-	}
-	
+		}		
+	}	
 	public function getID($id)
 	{
 		$stmt = $this->db->prepare("SELECT * FROM tbl_users WHERE id=:id");
@@ -36,17 +31,13 @@ class crud
 		$editRow=$stmt->fetch(PDO::FETCH_ASSOC);
 		return $editRow;
 	}
-
 	public function getID_Detail($id)
 	{
 		$stmt = $this->db->prepare("SELECT * FROM blog WHERE id=:id");
 		$stmt->execute(array(":id"=>$id));
 		$editRow=$stmt->fetch(PDO::FETCH_ASSOC);
 		return $editRow;
-	}
-
-
-	
+	}	
 	public function update($id,$first_name,$last_name,$email_id,$contact_no)
 	{
 		try
@@ -82,6 +73,83 @@ class crud
 
 /* Get Blog Page */
 	
+	public function getBlogSimple($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>  
+                <!-- Blog Post -->
+
+
+			     <!-- Blog Code
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
+	// Product ITEM
+
+
+
+	public function getShop($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>  
+                <!--  -->
+                
+						<div class="product_item">
+							<div class="product_border"></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image2'] ?>" alt=""></div>
+								<div class="product_content">
+									<div class="product_price">$ <?php echo $row ['price'] ?></div>
+									<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id'] ?>" tabindex="0"><?php echo $row ['p_name'] ?></a></div></div>
+								</div>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<ul class="product_marks">
+									<li class="product_mark product_discount">- 25%</li>
+									<li class="product_mark product_new">new</li>
+								</ul>
+							</div>
+
+
+			     <!-- 
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
+
+	/* Get Blog Page */
+	
 	public function getBlog($query)
 	{
 		$stmt = $this->db->prepare($query);
@@ -93,27 +161,14 @@ class crud
 			{
 				?>  
                 <!-- Blog Post -->
-			      <div class="card mb-4">
-			        <div class="card-body">
-			          <div class="row">
-			            <div class="col-lg-6">
-			              <a href="post.php?id=<?php print($row['id']); ?>">
-			                <img class="img-fluid rounded" src="uploads/img/<?php print($row['image']); ?>" alt="">
-			              </a>
-			            </div>
-			            <div class="col-lg-6">
-			              <h2 class="card-title"><?php print($row['title']); ?></h2>
-			              <p class="card-text"><?php print($row['description']); ?></p>
-			              <a href="post.php?id=<?php print($row['id']); ?>" class="btn btn-primary">Read More &rarr;</a>
-			            </div>
-			          </div>
-			        </div>
-			        <div class="card-footer text-muted">
-			          Posted on <?php print($row['create_date']); ?>
-			          <a href="#"><?php print($row['user_id']); ?> SENG Sourng</a>
-			        </div>
-			      </div>
+               
+						<div class="blog_post">
+							<div class="blog_image" style="background-image:url(images/<?php echo $row['image1'] ?>)"></div>
+							<div class="blog_text"><?php echo $row ['text'] ?></div>
+							<div class="blog_button"><a href="product.php?id=<?php echo $row['p_id'] ?>">Continue Reading</a></div>							
+						</div>	
 
+			     <!-- Blog Code
                 <?php
 			}
 		}
@@ -128,7 +183,66 @@ class crud
 		
 	}
 
-	public function getTitle_of_The_Week($query)
+
+
+	// Get Bast Rated
+		public function getBastRate($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>                  
+
+                <!-- Slider Item -->
+  
+									<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
+											<a href="product.php?id=<?php echo $row['p_id'] ?>">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image1'] ?>" alt="">
+											</div>
+											</a>
+											<div class="product_content">
+												<div class="product_price discount">$ <?php echo $row['price'] - ( $row['price']*$row['discount']/100) ?><span><strike>$ <?php echo $row['price'] ?></strike></span></div>
+												<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id'] ?>"><?php echo $row ['p_name'] ?></a></div></div>
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount"><?php echo $row['discount'] ?>%</li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
+	// GEt On Soul
+
+
+	public function getOnsale($query)
 	{
 		$stmt = $this->db->prepare($query);
 		$stmt->execute();
@@ -138,7 +252,37 @@ class crud
 			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
 			{
 				?>  
-               <div class="deals_title"><?php print($row['title']); ?></div>
+        <!-- Slider Item -->
+
+        <div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+											<a href="product.php?id=<?php echo $row['p_id']?>">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image1'] ?>" alt="">
+											</div>
+											</a>
+
+											<div class="product_content">
+												<div class="product_price">$ <?php echo $row['price'] ?></div>
+												<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id']?>"><?php echo $row['p_name'] ?></a></div></div>
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button active">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount"></li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+
+
 
                 <?php
 			}
@@ -154,11 +298,145 @@ class crud
 		
 	}
 
+	// End
 
+	// Recent View
+	public function getRecentview($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
 	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>  
+
+							<!-- Recently Viewed Item -->
+							<div class="owl-item">
+								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+									<div class="viewed_image"><img src="images/<?php echo $row['feature'] ?>" alt=""></div>
+									<div class="viewed_content text-center">
+										<div class="viewed_price">$<?php echo $row['price']-$row['price'] * $row['discount']/100 ?><span>$<?php echo $row['price'] ?></span></div>
+										<div class="viewed_name"><a href="product.php?id=<?php echo $row['p_id']?>"><?php echo $row ['p_name'] ?></a></div>
+									</div>
+									<ul class="item_marks">
+										<li class="item_mark item_discount">-<?php echo $row['discount']; ?>%</li>
+										<li class="item_mark item_new">new</li>
+									</ul>
+								</div>
+							</div>
+        
+
+
+
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+	//End
+// Get View Detail
+
+
+	public function getViewDetail($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>
+                <div class="row">
+				<!-- Images -->
+				<div class="col-lg-2 order-lg-1 order-2">
+					<ul class="image_list">
+						<li data-image="images/<?php echo $row['image1'] ?>"><img src="images/<?php echo $row['image1'] ?>" alt=""></li>
+						<li data-image="images/<?php echo $row['image2'] ?>"><img src="images/<?php echo $row['image2'] ?>" alt=""></li>
+						<li data-image="images/<?php echo $row['image3'] ?>"><img src="images/<?php echo $row['image3'] ?>" alt=""></li>
+					</ul>
+				</div>
+				<!-- Selected Image -->
+				<div class="col-lg-5 order-lg-2 order-1">
+					<div class="image_selected"><img src="images/<?php echo $row['feature'] ?>" alt=""></div>
+				</div>
+				<!-- Description -->
+				<div class="col-lg-5 order-3">
+					<div class="product_description">
+						<div class="product_category"><?php echo $row['c_name'] ?></div>
+						<div class="product_name"><?php echo $row['p_name'] ?></div>
+						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
+						<div class="product_text"><p><?php echo $row['description'] ?></p></div>
+						<div class="order_info d-flex flex-row">
+							<form action="#">
+								<div class="clearfix" style="z-index: 1000;">
+									<!-- Product Quantity -->
+									<div class="product_quantity clearfix">
+										<span>Quantity: </span>
+										<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+										<div class="quantity_buttons">
+											<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+											<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+										</div>
+									</div>
+
+									<!-- Product Color -->
+									<ul class="product_color">
+										<li>
+											<span>Color: </span>
+											<div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
+											<div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
+
+											<ul class="color_list">
+												<li><div class="color_mark" style="background: #999999;"></div></li>
+												<li><div class="color_mark" style="background: #b19c83;"></div></li>
+												<li><div class="color_mark" style="background: #000000;"></div></li>
+											</ul>
+										</li>
+									</ul>
+
+								</div>
+
+								<div class="product_price">$<?php echo $row['price'] -$row['price']*$row['discount']/100 ?></div>
+								<div class="button_container">
+									<button type="button" class="button cart_button">Add to Cart</button>
+									<div class="product_fav"><i class="fas fa-heart"></i></div>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
 // Get Deals of The Week
 
-	public function getDeals_of_the_week($query)
+
+	public function getDeals($query)
 	{
 		$stmt = $this->db->prepare($query);
 		$stmt->execute();
@@ -170,21 +448,31 @@ class crud
 				?>  
                 
 								<!-- Deals Item -->
+				<div class="deals">
+						 <div class="deals_title">Deal OFF The Week</div>
+						<div class="deals_slider_container">
+							
+							<!-- Deals Slider -->
+							<div class="owl-carousel owl-theme deals_slider">
 								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="images/<?php print($row['dow_img']); ?>" alt=""></div>
+									<div class="deals_image">										
+										<a href="product.php?id=<?php print($row['category_id']); ?>"><img src="images/<?php print($row['feature']); ?>" alt=""></a>
+									</div>
 									<div class="deals_content">
 										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_category"><a href="#"><?php print($row['dow_name']); ?></a></div>
-											<div class="deals_item_price_a ml-auto"><?php print($row['dow_old_price']); ?></div>
+											<div class="deals_item_category"><a href=" product.php?id=<?php echo $row['dow_id']?>"><?php print($row['p_name']); ?></a></div>
+											<div class="deals_item_price_a ml-auto"><strike>$ <?php print($row['price']); ?></strike></div>
 										</div>
 										<div class="deals_info_line d-flex flex-row justify-content-start">
-											<div class="deals_item_name"><?php print($row['dow_brand_name']); ?>    </div>
-											<div class="deals_item_price ml-auto">$225</div>
+											<div class="deals_item_name"><?php print($row['p_name']); ?>    </div>
+											<div class="deals_item_price ml-auto">$ 
+											<?php print($row['price']) - (($row['price'])*($row['discount'])/100); ?>
+										</div>
 										</div>
 										<div class="available">
 											<div class="available_line d-flex flex-row justify-content-start">
-												<div class="available_title">Available: <span><?php print($row['dow_available']); ?></span></div>
-												<div class="sold_title ml-auto">Already sold: <span><?php print($row['dow_sold']); ?></span></div>
+												<div class="available_title">Available: <span>6</span></div>
+												<div class="sold_title ml-auto">Already sold: <span>4</span></div>
 											</div>
 											<div class="available_bar"><span style="width:17%"></span></div>
 										</div>
@@ -194,24 +482,33 @@ class crud
 												<div class="deals_timer_subtitle">Offer ends in:</div>
 											</div>
 											<div class="deals_timer_content ml-auto">
-												<div class="deals_timer_box clearfix" data-target-time="">
+												<div class="deals_timer_box clearfix" data-target-time="<?php echo $row['end_date'] ?>">
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_hr" class="deals_timer_hr"></div>
-														<span><?php print($row['dow_hours']); ?></span>
+														<span>hours></span>
 													</div>
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_min" class="deals_timer_min"></div>
-														<span><?php print($row['dow_mins']); ?></span>
+														<span>mins</span>
 													</div>
 													<div class="deals_timer_unit">
 														<div id="deals_timer1_sec" class="deals_timer_sec"></div>
-														<span><?php print($row['dow_secs']); ?></span>
+														<span>sec</span>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
+
+						</div>
+
+						<div class="deals_slider_nav_container">
+							<div class="deals_slider_prev deals_slider_nav"><i class="fas fa-chevron-left ml-auto"></i></div>
+							<div class="deals_slider_next deals_slider_nav"><i class="fas fa-chevron-right ml-auto"></i></div>
+						</div>
+					</div>
 						
 
                 <?php
@@ -229,7 +526,149 @@ class crud
 	}
 
 
+public function getFeatured($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>  
 
+				<div class="featured_slider_item">
+										<div class="border_active"></div>
+										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
+											<a href="product.php?id=<?php echo $row['p_id']?>">
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image1'] ?>" alt="">
+											</div>
+											</a>
+											<div class="product_content">
+												<div class="product_price">$ <?php echo $row['price'] ?></div>
+												<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id'] ?>"><?php echo $row['p_name'] ?></a></div></div>
+												<div class="product_extras">
+													<div class="product_color">
+														<input type="radio" checked name="product_color" style="background:#b19c83">
+														<input type="radio" name="product_color" style="background:#000000">
+														<input type="radio" name="product_color" style="background:#999999">
+													</div>
+													<button class="product_cart_button">Add to Cart</button>
+												</div>
+											</div>
+											<div class="product_fav"><i class="fas fa-heart"></i></div>
+											<ul class="product_marks">
+												<li class="product_mark product_discount"></li>
+												<li class="product_mark product_new">new</li>
+											</ul>
+										</div>
+									</div>
+								
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
+
+	public function getNewArrivls($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>                  
+                <div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<a href="product.php?id=<?php echo $row['p_id'] ?>">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image1'] ?>" alt=""></div>
+											</a>
+												<div class="product_content">
+													<div class="product_price">$ <?php echo $row['price'] ?></div>
+													<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id'] ?>"><?php echo $row['p_name'] ?></a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button">Add to Cart</button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount">-25%</li>
+													<li class="product_mark product_new">new</li>
+												</ul>
+											</div>
+										</div>
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>
+            
+            <?php
+		}
+		
+	}
+
+
+	// Get Banner
+		public function getBanner($query)
+	{
+		$stmt = $this->db->prepare($query);
+		$stmt->execute();
+	
+		if($stmt->rowCount()>0)
+		{
+			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+			{
+				?>  
+                <!-- Banner -->
+				<div class="banner">
+					<div class="banner_background" style="background-image:url(images/<?php print($row['img_backgournd']); ?>)"></div>
+					<div class="container fill_height">
+						<div class="row fill_height">
+							<div class="banner_product_image"><img src="images/<?php print($row['feature']); ?>" alt=""></div>
+							<div class="col-lg-5 offset-lg-4 fill_height">
+								<div class="banner_content">
+									<h1 class="banner_text"><?php print($row['tittle']); ?></h1>
+									<div class="banner_price"><span>$ <?php echo $row['price'] ?></span>$ <?php echo $row['price']-($row['price']*$row['discount']/100) ?></div>
+									<div class="banner_product_name"><?php print($row['p_name']); ?></div>
+									<div class="button banner_button"><a href="product.php?id=<?php echo $row['p_id'] ?>">Shop Now</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <?php
+			}
+		}
+		else
+		{
+			?>
+            
+            <p>No Data..</p>            
+            <?php
+		}		
+	}
 
 	/* paging */
 	
@@ -328,5 +767,12 @@ class crud
 	}
 	
 	/* paging */
+
+
+
+
+
 	
+
+
 }

@@ -1,3 +1,10 @@
+
+<?php
+  include_once 'db/dbconfig.php';
+
+?>
+
+
 <?php include_once('inc/header.php') ?>
 
 <body>
@@ -14,7 +21,7 @@
 		<!-- End Top Bar -->
 
 		<!-- Header Main -->
-			<?php include_once('inc/header_main.php') ?>
+			<?php include_once('inc/search.php') ?>
 
 		<!-- end header_main -->
 		
@@ -23,7 +30,7 @@
 
 		<!-- End Main Navigation -->
 		<!-- Menu -->
-			<?php include_once('inc/menu.php') ?>
+			<?php //include_once('inc/menu.php') ?>
 
 		<!-- end menu -->
 
@@ -33,78 +40,17 @@
 
 	<div class="single_product">
 		<div class="container">
-			<div class="row">
-
-				<!-- Images -->
-				<div class="col-lg-2 order-lg-1 order-2">
-					<ul class="image_list">
-						<li data-image="images/single_4.jpg"><img src="images/single_4.jpg" alt=""></li>
-						<li data-image="images/single_2.jpg"><img src="images/single_2.jpg" alt=""></li>
-						<li data-image="images/single_3.jpg"><img src="images/single_3.jpg" alt=""></li>
-					</ul>
-				</div>
-
-				<!-- Selected Image -->
-				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img src="images/single_4.jpg" alt=""></div>
-				</div>
-
-				<!-- Description -->
-				<div class="col-lg-5 order-3">
-					<div class="product_description">
-						<div class="product_category">Laptops</div>
-						<div class="product_name">MacBook Air 13</div>
-						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-						<div class="product_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum. laoreet turpis, nec sollicitudin dolor cursus at. Maecenas aliquet, dolor a faucibus efficitur, nisi tellus cursus urna, eget dictum lacus turpis.</p></div>
-						<div class="order_info d-flex flex-row">
-							<form action="#">
-								<div class="clearfix" style="z-index: 1000;">
-
-									<!-- Product Quantity -->
-									<div class="product_quantity clearfix">
-										<span>Quantity: </span>
-										<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-										<div class="quantity_buttons">
-											<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-											<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-										</div>
-									</div>
-
-									<!-- Product Color -->
-									<ul class="product_color">
-										<li>
-											<span>Color: </span>
-											<div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
-											<div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
-
-											<ul class="color_list">
-												<li><div class="color_mark" style="background: #999999;"></div></li>
-												<li><div class="color_mark" style="background: #b19c83;"></div></li>
-												<li><div class="color_mark" style="background: #000000;"></div></li>
-											</ul>
-										</li>
-									</ul>
-
-								</div>
-
-								<div class="product_price">$2000</div>
-								<div class="button_container">
-									<button type="button" class="button cart_button">Add to Cart</button>
-									<div class="product_fav"><i class="fas fa-heart"></i></div>
-								</div>
-								
-							</form>
-						</div>
-					</div>
-				</div>
-
-			</div>
+			<?php
+				$query = "SELECT p.*, c.*  from tbl_products AS p JOIN category AS c ON p.category_id=c.category_id WHERE p.p_id=".$_GET['id'];       
+							      $records_per_page=100;
+							      $newquery = $crud->paging($query,$records_per_page);
+							      $crud->getViewDetail($newquery);
+			?>
 		</div>
 	</div>
 
 	<!-- Recently Viewed -->
-
-	<div class="viewed">
+		<div class="viewed">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -117,48 +63,44 @@
 					</div>
 
 					<div class="viewed_slider_container">
-						
-						<!-- Recently Viewed Slider -->
 
 						<div class="owl-carousel owl-theme viewed_slider">
 							
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/view_1.jpg" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">$225<span>$300</span></div>
-										<div class="viewed_name"><a href="#">Beoplay H7</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">new</li>
-									</ul>
-								</div>
-							</div>
+						<?php
+							$query = "SELECT * FROM tbl_products";       
+							      $records_per_page=100;
+							      $newquery = $crud->paging($query,$records_per_page);
+							      $crud->getRecentview($newquery);
+							?>
 
 						</div>
+						
+					
+
 
 					</div>
+
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
+
 	<!-- Brands -->
-		<?php include_once('inc/brands.php'); ?>
+		<?php echo include_once('inc/brands.php'); ?>
 
 	<!-- end brands -->
 
 	<!-- Newsletter -->
-		<?php include_once('inc/newsletter.php') ?>
+		<?php echo include_once('inc/newsletter.php') ?>
 
 	<!-- End Newsletter -->
 	<!-- Footer -->
-		<?php include_once('inc/footer.php') ?>	
+		<?php echo include_once('inc/footer.php') ?>	
 	<!-- End footer -->
 	<!-- Copyright -->
-		<?php include_once('inc/copyright.php') ?>
+		<?php echo include_once('inc/copyright.php') ?>
 	<!--  End Copyright -->
 </div>
 

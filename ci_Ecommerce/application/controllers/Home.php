@@ -108,8 +108,7 @@ class Home extends CI_Controller {
 
 		public function detail($id){
 
-			$data['getMaincategory'] = $this->m_impact->get_by_sql("SELECT c.*, p.* ,s_c.* FROM category AS c JOIN products AS p INNER JOIN sub_category AS s_c ON c.category_id=p.category_id=s_c.category_id = s_c.category_id");
-
+		$data['getMaincategory'] = $this->m_impact->get_by_sql("SELECT scat.*, c.* FROM sub_category AS scat JOIN category AS c ON scat.category_id= c.category_id ");
 		$data['getSubcategory'] = $this->m_impact->get_by_sql("SELECT c.* ,s_c.* FROM category AS c JOIN sub_category AS s_c ON c.category_id=s_c.category_id");
 		
 

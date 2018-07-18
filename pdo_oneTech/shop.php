@@ -1,3 +1,11 @@
+
+<?php
+  include_once 'db/dbconfig.php';
+
+?>
+
+
+
 <?php include_once('inc/header.php') ?>
 
 <body>
@@ -14,7 +22,7 @@
 		<!-- End Top Bar -->
 
 		<!-- Header Main -->
-			<?php include_once('inc/header_main.php') ?>
+			<?php include_once('inc/search.php') ?>
 
 		<!-- end header_main -->
 		
@@ -23,7 +31,7 @@
 
 		<!-- End Main Navigation -->
 		<!-- Menu -->
-			<?php include_once('inc/menu.php') ?>
+			<?php //include_once('inc/menu.php') ?>
 
 		<!-- end menu -->
 
@@ -121,68 +129,44 @@
 							</div>
 						</div>
 
+						
+
 						<div class="product_grid">
 							<div class="product_grid_border"></div>
 
-							<!-- Product Item -->
-							<div class="product_item is_new">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_5.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="product.php" tabindex="0">Philips BT6900A</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
+							
+							
+							<?php
+								$query = "SELECT * FROM tbl_products ";       
+								 $records_per_page=6;
+								$newquery = $crud->paging($query,$records_per_page);
+								$crud->getShop($newquery);
+							?>	
 
-							<!-- Product Item -->
-							<div class="product_item discount">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225<span>$300</span></div>
-									<div class="product_name"><div><a href="product.php" tabindex="0">Huawei MediaPad...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
 
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="product.php" tabindex="0">Apple iPod shuffle</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">-25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div>
+
+
 						</div>
 
-						<!-- Shop Page Navigation -->
 
-						<div class="shop_page_nav d-flex flex-row">
-							<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
-							<ul class="page_nav d-flex flex-row">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">...</a></li>
-								<li><a href="#">21</a></li>
-							</ul>
-							<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
-						</div>
+							
+									<!-- Shop Page Navigation -->
+								<!-- <div class="shop_page_nav d-flex flex-row">
+									<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
+									<ul class="page_nav d-flex flex-row">
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">...</a></li>
+										<li><a href="#">21</a></li>
+									</ul>
+									<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
+								</div> -->
+						
+
+						
+
+
 
 					</div>
 				</div>
@@ -266,7 +250,7 @@
 	</div>
 
 	<!-- Newsletter -->
-		<?php include_once('inc/newsletter.php') ?>
+		<?php  include_once('inc/newsletter.php') ?>
 
 	<!-- End Newsletter -->
 	<!-- Footer -->
