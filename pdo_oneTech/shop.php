@@ -65,9 +65,7 @@
 								<li><a href="#">Smartphones & Tablets</a></li>
 								<li><a href="#">TV & Audio</a></li>
 								<li><a href="#">Gadgets</a></li>
-								<li><a href="#">Car Electronics</a></li>
-								<li><a href="#">Video Games & Consoles</a></li>
-								<li><a href="#">Accessories</a></li>
+								
 							</ul>
 						</div>
 						<div class="sidebar_section filter_by_section">
@@ -177,6 +175,7 @@
 									</ul>
 									<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
 								</div>
+<<<<<<< HEAD
 						<tr>
         <td colspan="7" align="center">
  			<div class="pagination-wrap">
@@ -184,6 +183,9 @@
         	</div>
         </td>
     </tr>
+=======
+						
+>>>>>>> c7f43d56f2f96a62b966a94d4db5927b4885b26f
 
 						
 
