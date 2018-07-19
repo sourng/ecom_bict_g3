@@ -119,7 +119,7 @@ class crud
                 
 						<div class="product_item">
 							<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images<?php echo $row['image2'] ?>" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?php echo $row['image2'] ?>" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$ <?php echo $row ['price'] ?></div>
 									<div class="product_name"><div><a href="product.php?id=<?php echo $row['p_id'] ?>" tabindex="0"><?php echo $row ['p_name'] ?></a></div></div>
@@ -130,20 +130,6 @@ class crud
 									<li class="product_mark product_new">new</li>
 								</ul>
 							</div>
-
-						<!-- <div class="product_item">
-							<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$ 66</div>
-									<div class="product_name"><div><a href="" tabindex="0">ggg</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-heart"></i></div>
-								<ul class="product_marks">
-									<li class="product_mark product_discount">- 25%</li>
-									<li class="product_mark product_new">new</li>
-								</ul>
-							</div> -->
 
 
 			     <!-- 

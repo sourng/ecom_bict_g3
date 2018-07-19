@@ -175,17 +175,16 @@
 									</ul>
 									<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
 								</div>
-<<<<<<< HEAD
+
 						<tr>
-        <td colspan="7" align="center">
- 			<div class="pagination-wrap">
-            <?php $crud->paginglink($query,$records_per_page); ?>
-        	</div>
-        </td>
-    </tr>
-=======
-						
->>>>>>> c7f43d56f2f96a62b966a94d4db5927b4885b26f
+					        <td colspan="7" align="center">
+					 			<div class="pagination-wrap">
+					            <?php $crud->paginglink($query,$records_per_page); ?>
+					        	</div>
+					        </td>
+					    </tr>
+
+		
 
 						
 
