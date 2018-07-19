@@ -141,8 +141,23 @@
 								 $records_per_page=6;
 								$newquery = $crud->paging($query,$records_per_page);
 								$crud->getShop($newquery);
+							//for ($i=1; $i <4 ; $i++) { 
+						
 							?>	
-
+							<!-- <div class="product_item">
+							<div class="product_border"></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="" alt=""></div>
+								<div class="product_content">
+									<div class="product_price">$ 66</div>
+									<div class="product_name"><div><a href="" tabindex="0">ggg</a></div></div>
+								</div>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<ul class="product_marks">d
+									<li class="product_mark product_discount">- 25%</li>
+									<li class="product_mark product_new">new</li>
+								</ul>
+							</div> -->
+							<?php //} ?>
 
 
 
@@ -151,7 +166,7 @@
 
 							
 									<!-- Shop Page Navigation -->
-								<!-- <div class="shop_page_nav d-flex flex-row">
+								<div class="shop_page_nav d-flex flex-row">
 									<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
 									<ul class="page_nav d-flex flex-row">
 										<li><a href="#">1</a></li>
@@ -161,8 +176,14 @@
 										<li><a href="#">21</a></li>
 									</ul>
 									<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
-								</div> -->
-						
+								</div>
+						<tr>
+        <td colspan="7" align="center">
+ 			<div class="pagination-wrap">
+            <?php $crud->paginglink($query,$records_per_page); ?>
+        	</div>
+        </td>
+    </tr>
 
 						
 
@@ -172,7 +193,7 @@
 				</div>
 			</div>
 		</div>
-	</dsiv>
+	</div>
 
 	<!-- Recently Viewed -->
 
