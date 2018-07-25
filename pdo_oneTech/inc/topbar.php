@@ -28,7 +28,26 @@
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="images/user.svg" alt=""></div>
 								<div><a href="#">Register</a></div>
-								<div><a href="#">Sign in</a></div>
+								<div><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>SignIn</a>
+									<ul class="dropdown-menu">
+										<div style="width:300px;">
+											<div class="panel panel-primary">
+												<div class="panel-heading">Login</div>
+												<div class="panel-heading">
+													<form onsubmit="return false" id="login">
+														<label for="email">Email</label>
+														<input type="email" class="form-control" name="email" id="email" required/>
+														<label for="email">Password</label>
+														<input type="password" class="form-control" name="password" id="password" required/>
+														<p><br/></p>
+														<a href="#" style="color:white; list-style:none;">Forgotten Password</a><input type="submit" class="btn btn-success" style="float:right;">
+													</form>
+												</div>
+												<div class="panel-footer" id="e_msg"></div>
+											</div>
+										</div>
+									</ul>
+							</div>
 							</div>
 						</div>
 					</div>

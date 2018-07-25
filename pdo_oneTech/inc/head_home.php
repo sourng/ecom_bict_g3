@@ -14,4 +14,11 @@
 <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="icon" type="image/png" href="http://aux.iconspalace.com/uploads/131266169464399853.png" />
+<script src="js/jquery2.js"></script>
+<script src="main.js"></script>
+
+<!-- <link rel="stylesheet" href="styles/bootstrap.min.css"/> -->
+
+
 </head>

@@ -56,7 +56,32 @@
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="#">Cart</a></div>
+										<div class="cart_text">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span>Cart<span class="badge">0</span></a>
+					<div class="dropdown-menu" style="width:400px;">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-md-3">Sl.No</div>
+									<div class="col-md-3">Product Image</div>
+									<div class="col-md-3">Product Name</div>
+									<div class="col-md-3">Price in $.</div>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div id="cart_product">
+								<!--<div class="row">
+									<div class="col-md-3">Sl.No</div>
+									<div class="col-md-3">Product Image</div>
+									<div class="col-md-3">Product Name</div>
+									<div class="col-md-3">Price in $.</div>
+								</div>-->
+								</div>
+							</div>
+							<div class="panel-footer"></div>
+						</div>
+					</div>
+										</div>
 										<div class="cart_price">$85</div>
 									</div>
 								</div>

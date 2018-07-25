@@ -1,6 +1,14 @@
 
 <?php
   include_once 'db/dbconfig.php';
+  include_once 'db/db.php';
+
+  
+	session_start();
+	if(isset($_SESSION["uid"])){
+		header("location:profile.php");
+	}
+
 
 ?>
 
@@ -29,7 +37,7 @@
 
 		<!-- End Main Navigation -->
 		<!-- Menu -->
-			<?php// include_once('inc/menu.php') ?>
+			<?php include_once('inc/menu.php') ?>
 
 		<!-- end menu -->
 
@@ -43,6 +51,7 @@
 			<div class="banner_2_dots"></div>
 			<!-- Banner 2 Slider -->
 			<div class="owl-carousel owl-theme banner_2_slider">	
+				
 				<?php
 					$query = "SELECT b.* , p.* FROM tbl_banner AS b JOIN tbl_products AS p ON b.banner_id=p.banner_id ";       
 					 $records_per_page=6;
@@ -143,12 +152,13 @@
 							<!-- Get Featured -->
 							<!-- Product Panel -->
 							<div class="product_panel panel active">
-								<div class="featured_slider slider">
+								<div id="get_product" class="featured_slider slider">
+									
 									<?php
-							      $query = "SELECT p.*, c.*  from tbl_products AS p JOIN category AS c ON p.category_id=c.category_id where c.status  = new";       
-							      $records_per_page=100;
-							      $newquery = $crud->paging($query,$records_per_page);
-							      $crud->getFeatured($newquery);
+							      // $query = "SELECT p.*, c.*  from tbl_products AS p JOIN category AS c ON p.category_id=c.category_id where c.status  = new";       
+							      // $records_per_page=100;
+							      // $newquery = $crud->paging($query,$records_per_page);
+							      // $crud->getFeatured($newquery);
 							     ?>
 									
 								</div>
